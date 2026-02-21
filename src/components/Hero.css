@@ -1,0 +1,297 @@
+/* Side down arrow for mobile */
+.side-down-arrow {
+  display: none;
+}
+.down-arrow-icon {
+  color: #fff;
+  font-size: 36px;
+  animation: bounceDown 1.2s infinite;
+  line-height: 1;
+  margin-top: 8px;
+}
+@media (max-width: 768px) {
+  .side-down-arrow {
+    display: flex !important;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 24px;
+    z-index: 1000;
+    background: rgba(30,64,175,0.7);
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 8px #0003;
+    opacity: 1;
+    margin: 0;
+  }
+  .down-arrow-icon {
+    font-size: 32px;
+    margin-top: 0;
+  }
+}
+@keyframes bounceDown {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(16px); }
+}
+/* Floating electronic images */
+.hero-icons {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 3;
+}
+.hero-icon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  opacity: 0.92;
+  filter: drop-shadow(0 4px 16px rgba(0,0,0,0.12));
+  animation: float 5s ease-in-out infinite;
+}
+.hero-icon.fridge { top: 18%; left: 10%; animation-delay: 0s; }
+.hero-icon.washing { top: 65%; left: 20%; animation-delay: 1.2s; }
+.hero-icon.geyser { top: 30%; left: 80%; animation-delay: 2.1s; }
+.hero-icon.ac { top: 75%; left: 70%; animation-delay: 0.7s; }
+.hero-icon.electrical { top: 55%; left: 50%; animation-delay: 1.7s; }
+
+@media (max-width: 768px) {
+  .hero-icon { width: 38px; height: 38px; }
+}
+.hero-stars {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+.star {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  box-shadow: 0 0 8px 2px #fff7;
+  animation: blink 2s infinite;
+}
+
+/* Different delays for each star for random blinking */
+.star:nth-child(1) { top: 15%; left: 20%; animation-delay: 0s; }
+.star:nth-child(2) { top: 30%; left: 60%; animation-delay: 0.5s; }
+.star:nth-child(3) { top: 50%; left: 40%; animation-delay: 1s; }
+.star:nth-child(4) { top: 70%; left: 80%; animation-delay: 1.5s; }
+.star:nth-child(5) { top: 80%; left: 10%; animation-delay: 0.8s; }
+.star:nth-child(6) { top: 25%; left: 75%; animation-delay: 1.2s; }
+.star:nth-child(7) { top: 60%; left: 55%; animation-delay: 0.3s; }
+.star:nth-child(8) { top: 40%; left: 85%; animation-delay: 1.7s; }
+.star:nth-child(9) { top: 65%; left: 30%; animation-delay: 0.9s; }
+.star:nth-child(10) { top: 10%; left: 50%; animation-delay: 1.4s; }
+
+@keyframes blink {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 0.2; }
+}
+.hero {
+  /* background is set dynamically in Hero.jsx */
+  color: white;
+  padding: 80px 10px;
+  text-align: center;
+  min-height: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-content {
+  max-width: 800px;
+  animation: fadeInUp 0.8s ease;
+  position: relative;
+  z-index: 10;
+}
+
+.hero {
+  background-size: cover;
+  min-height: 320px;
+  background-position: center;
+}
+.hero-content.hero-overlay {
+  padding: 32px 12px;
+  font-size: 1.05rem;
+  background: rgba(222, 218, 218, 0.138);
+  border-radius: 12px;
+  margin-bottom: 40px;
+  opacity: 0.95;
+}
+
+.hero-highlight {
+  margin: 30px 0;
+}
+
+.highlight-badge {
+  display: inline-block;
+  background-color: rgba(195, 179, 179, 0.2);
+  color: white;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  font-size: 1rem;
+  animation: pulse 2s infinite;
+}
+
+.hero-cta-row {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-cta-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: center;
+  justify-content: center;
+}
+
+.cta-badge {
+  display: inline-block;
+  background: linear-gradient(90deg,#ff7a00,#ff5500);
+  color: white;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 1rem;
+  box-shadow: 0 8px 24px rgba(255,122,0,0.18);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+@media (max-width: 480px) {
+  .cta-badge { font-size: 0.9rem; padding: 8px 16px; }
+  .hero-cta-row { gap: 10px; }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+  .cta-button {
+    background: linear-gradient(90deg, #ff7a00 0%, #ff5500 100%);
+    color: #fff;
+    padding: 18px 48px;
+    font-size: 1.25rem;
+    border-radius: 999px;
+    font-weight: 700;
+    border: none;
+    box-shadow: 0 0 24px 6px rgba(255, 122, 0, 0.25), 0 8px 24px rgba(255,122,0,0.18);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    margin-top: 24px;
+    animation: pulseBtn 1.2s infinite, blinkBtn 1.2s infinite;
+    outline: none;
+    position: relative;
+    z-index: 2;
+  }
+
+  .cta-button::after {
+    content: '';
+    position: absolute;
+    left: 0; right: 0; top: 0; bottom: 0;
+    border-radius: 999px;
+    box-shadow: 0 0 32px 8px rgba(255, 122, 0, 0.18);
+    z-index: -1;
+    pointer-events: none;
+    animation: glowBtn 1.2s infinite;
+  }
+
+@keyframes blinkBtn {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes pulseBtn {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.07); }
+}
+
+@keyframes glowBtn {
+  0%, 100% { box-shadow: 0 0 32px 8px rgba(255, 122, 0, 0.18); }
+  50% { box-shadow: 0 0 48px 16px rgba(255, 122, 0, 0.32); }
+}
+
+@keyframes blinkBtn {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.cta-button:hover {
+  background-color: #c94d09;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.6);
+}
+
+.cta-button:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 80px 20px;
+    min-height: auto;
+  }
+
+  .hero h2 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1.1rem;
+  }
+
+  .highlight-badge {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .cta-button {
+    padding: 12px 30px;
+    font-size: 1rem;
+  }
+}
