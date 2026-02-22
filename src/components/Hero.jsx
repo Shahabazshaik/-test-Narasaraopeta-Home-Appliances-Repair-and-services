@@ -9,25 +9,37 @@ export default function Hero() {
   const scrollTimeout = useRef(null);
   const showTimeout = useRef(null);
 
-  // Slideshow logic
-  const images = [
-    'https://img.freepik.com/premium-photo/appliance-repair-technician-fixing-washing-machine-with-tools-workshop_38013-136475.jpg?semt=ais_user_personalization&w=740&q=80',
-    'https://www.rightcliq.in/images/services/about/rightcliq-service-about-12_886_450.webp?v=5',
-    'https://5.imimg.com/data5/ZZ/VS/HA/SELLER-2656676/house-wiring.png',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk-kfXzej64f5cTPDfsTOt2Yr2dvGan7EoMg&s',
-    'https://img.freepik.com/premium-photo/appliance-repair-technician-fixing-washing-machine-with-tools-workshop_38013-136475.jpg?semt=ais_user_personalization&w=740&q=80',
-    'https://www.rightcliq.in/images/services/about/rightcliq-service-about-12_886_450.webp?v=5',
-    'https://5.imimg.com/data5/ZZ/VS/HA/SELLER-2656676/house-wiring.png',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk-kfXzej64f5cTPDfsTOt2Yr2dvGan7EoMg&s'
+  // Slideshow logic with text sync
+  const slides = [
+    {
+      image: 'https://img.freepik.com/premium-photo/appliance-repair-technician-fixing-washing-machine-with-tools-workshop_38013-136475.jpg?semt=ais_user_personalization&w=740&q=80',
+      title: 'Washing Machine Repair',
+      text: 'Fast and Reliable Washing Machine Repair Services.'
+    },
+    {
+      image: 'https://www.rightcliq.in/images/services/about/rightcliq-service-about-12_886_450.webp?v=5',
+      title: 'Geyser Repair & Installation',
+      text: 'Fast, Reliable, and Affordable repairs.'
+    },
+    {
+      image: 'https://5.imimg.com/data5/ZZ/VS/HA/SELLER-2656676/house-wiring.png',
+      title: 'Home Electrical Services',
+      text: 'Safe House  Wiring and House Wiring Repair.'
+    },
+    {
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk-kfXzej64f5cTPDfsTOt2Yr2dvGan7EoMg&s',
+      title: 'plumbing Services',
+      text: 'Home plumbing works & Repair.'
+    }
   ];
-  const [currentImage, setCurrentImage] = useState(0);
+  const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentImage((prev) => (prev + 1) % images.length);
+      setCurrentSlide((prev) => (prev + 1) % slides.length);
     }, 4000);
     return () => clearInterval(interval);
-  }, [images.length]);
+  }, [slides.length]);
 
   useEffect(() => {
     const contactSection = document.getElementById('contact');
@@ -73,30 +85,27 @@ export default function Hero() {
         id="home"
         className="hero"
         style={{
-          backgroundImage: `url(${images[currentImage]})`,
-          backgroundSize: '100% 100%',
-          backgroundPosition: 'center',
+          backgroundImage: `url(${slides[currentSlide].image})`,
+          backgroundSize: window.innerWidth <= 768 ? 'contain' : 'cover',
+          backgroundRepeat: 'no-repeat',
+          backgroundPosition: 'center top',
           transition: 'background-image 0.5s',
-          minHeight: '650px',
+          minHeight: window.innerWidth <= 768 ? '220px' : '350px',
           width: '100%',
+          marginTop: window.innerWidth <= 768 ? '-24px' : '-40px',
         }}
       >
         <div className="hero-content hero-overlay">
-          <h2>Professional Repair Services</h2>
-          <p> Keep your home running smoothly.</p>
+          <h2>{slides[currentSlide].title}</h2>
+          <p>{slides[currentSlide].text}</p>
           {/* ...existing code... */}
           {/* ...existing code... */}
           {/* ...existing code... */}
-          {/* Down arrow for mobile users, fixed to the right side until Contact Us, only when not scrolling */}
-          {showArrow && !isScrolling && !waitingToShow && (
-            <div className="side-down-arrow">
-              <span className="down-arrow-icon">&#8595;</span>
-            </div>
-          )}
+          {/* Down arrow removed as requested */}
           {/* Move quick response badge even further down for more separation */}
           <div style={{ marginTop: 64, marginBottom: 8 }}>
             <div className="hero-cta-column">
-              <span className="cta-badge">quick responce is our speacility and reasonable price</span>
+              <span className="cta-badge">Quick Responce is Our Speaciality and Reasonable Price</span>
             </div>
           </div>
           <button
@@ -110,43 +119,44 @@ export default function Hero() {
         </div>
       </section>
       {/* Floating Call Button for Mobile */}
-      <a
-        href="tel:9381283935"
-        className="floating-call-btn"
-        title="Call Now"
-        style={{
-          position: 'fixed',
-          right: 16,
-          bottom: 24,
-          zIndex: 9999,
-          background: '#25d366',
-          borderRadius: '50%',
-          width: 90,
-          height: 90,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          justifyContent: 'center',
-          boxShadow: '0 4px 16px #0003',
-          animation: 'blink-call 1s infinite',
-          color: '#fff',
-          border: 'none',
-          cursor: 'pointer',
-          fontSize: 32,
-          textDecoration: 'none',
-          transition: 'background 0.2s',
-        }}
-      >
-        <span role="img" aria-label="Call">📞</span>
-        <span style={{ fontSize: 16, fontWeight: 'bold', marginTop: 4 }}>Call Now</span>
-      </a>
+      {showArrow && !isScrolling && !waitingToShow && (
+        <a
+          href="tel:9381283935"
+          className="floating-call-btn"
+          title="Call Now"
+          style={{
+            position: 'fixed',
+            right: 16,
+            bottom: 24,
+            zIndex: 9999,
+            background: '#25d366',
+            borderRadius: '35px',
+            width: 220,
+            height: 48,
+            display: 'flex',
+            flexDirection: 'row',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 4px 16px #0003',
+            animation: 'blink-call 1s infinite',
+            color: '#fff',
+            border: 'none',
+            cursor: 'pointer',
+            fontSize: 3,
+            textDecoration: 'none',
+            transition: 'background 0.1s',
+          }}
+        >
+          <span style={{ fontSize: 18, fontWeight: 'bold', whiteSpace: 'nowrap' }}>Call Now 9381283935</span>
+        </a>
+      )}
       <style>{`
         @media (min-width: 768px) {
           .floating-call-btn { display: none !important; }
         }
         @keyframes blink-call {
           0%, 100% { box-shadow: 0 0 0 0 #25d36688; }
-          50% { box-shadow: 0 0 0 12px #25d36633; }
+          100% { box-shadow: 0 0 0 56px #25d36633; }
         }
       `}</style>
     </>
