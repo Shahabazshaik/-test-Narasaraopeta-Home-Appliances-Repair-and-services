@@ -45,7 +45,7 @@ export default function ServiceCard({ service }) {
             <div style={{
               width: '100%',
               height: '100%',
-              background: 'rgba(255,255,255,0.7)',
+              background: 'rgba(255, 255, 255, 0.44)',
               borderRadius: '16px',
             }} />
           </div>
