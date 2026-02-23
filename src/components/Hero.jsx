@@ -12,12 +12,22 @@ export default function Hero() {
   // Slideshow logic with text sync
   const slides = [
     {
-      image: 'https://img.freepik.com/premium-photo/appliance-repair-technician-fixing-washing-machine-with-tools-workshop_38013-136475.jpg?semt=ais_user_personalization&w=740&q=80',
+      image: 'https://tse3.mm.bing.net/th/id/OIP.O5VQWO_WKedPH2En-GF93QHaE7?w=650&h=433&rs=1&pid=ImgDetMain&o=7&rm=3',
+      title: 'Welcome to Narasaraopeta Home Appliances Repair',
+      text:  'Your trusted home appliance repair service in Narasaraopeta.'
+    },
+    {
+      image: 'https://media.istockphoto.com/id/2140182550/photo/a-repairman-using-a-screwdriver-to-removes-the-front-lid-of-a-washing-machine.jpg?s=612x612&w=0&k=20&c=B4ctP71R7Gr2_XLacOqOpLpeiMYJfyZtTf_Y_3K2uxQ=',
       title: 'Washing Machine Repair',
       text: 'Fast and Reliable Washing Machine Repair Services.'
     },
     {
-      image: 'https://www.rightcliq.in/images/services/about/rightcliq-service-about-12_886_450.webp?v=5',
+      image: 'https://media.istockphoto.com/id/847612846/photo/male-technician-checking-refrigerator.webp?a=1&b=1&s=612x612&w=0&k=20&c=4LvYNl7-vaix9ICCL-rDI3_zietH0IvJQH3tArecqfw=',
+      title: 'Refrigerator Repair',
+      text: 'Expert Refrigerator Repair Services.'
+    },
+    {
+      image: 'https://media.istockphoto.com/id/1490247522/photo/repair-and-maintenance-of-boilers-the-hand-of-a-plumber-installs-a-thermostat-in-a-boiler.jpg?s=612x612&w=0&k=20&c=Lm5HdI2sf4mp2NOJq7yxwwmcAIgLG8Q7x26P5b6DjXA=',
       title: 'Geyser Repair & Installation',
       text: 'Fast, Reliable, and Affordable repairs.'
     },
@@ -27,7 +37,7 @@ export default function Hero() {
       text: 'Safe House  Wiring and House Wiring Repair.'
     },
     {
-      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSk-kfXzej64f5cTPDfsTOt2Yr2dvGan7EoMg&s',
+      image: 'https://media.istockphoto.com/id/482988553/photo/repairing-sink.jpg?s=612x612&w=0&k=20&c=FXvXGE08ZtyhhsnLALnAMFg70hOt872dDjtAG57QMfI=',
       title: 'plumbing Services',
       text: 'Home plumbing works & Repair.'
     }
@@ -96,8 +106,12 @@ export default function Hero() {
         }}
       >
         <div className="hero-content hero-overlay">
-          <h2>{slides[currentSlide].title}</h2>
-          <p>{slides[currentSlide].text}</p>
+          <h2 style={{ color: '#f4f6f8', fontFamily: 'fangsong, ', fontWeight: 700, letterSpacing: '1px', textShadow: '0 6px 19px #0008' }}>
+            {slides[currentSlide].title}
+          </h2>
+          <p style={{ color: '#fff', fontFamily: '-moz-initial  ', fontWeight: 400, fontSize: '1.2rem', textShadow: '0 1px 4px #0007' }}>
+            {slides[currentSlide].text}
+          </p>
           {/* ...existing code... */}
           {/* ...existing code... */}
           {/* ...existing code... */}
