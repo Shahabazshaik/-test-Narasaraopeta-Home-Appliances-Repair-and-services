@@ -154,19 +154,45 @@ export default function Hero() {
           {/* ...existing code... */}
           {/* Down arrow removed as requested */}
           {/* Move quick response badge even further down for more separation */}
-          <div style={{ marginTop: 64, marginBottom: 8 }}>
+          <div style={{ marginTop: 64, marginBottom: 24 }}>
             <div className="hero-cta-column">
-              <span className="cta-badge">Quick Responce is Our Speaciality and Reasonable Price</span>
+              <span className="cta-badge">Quick Response is Our Speciality and Reasonable Price</span>
             </div>
           </div>
-          <button
-            className="cta-button"
-            type="button"
-            style={{ marginTop: 32 }}
-            onClick={() => window.open('https://wa.me/919381283935?text=I%20want%20to%20book%20a%20service', '_blank')}
-          >
-            Book a Service
-          </button>
+          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 8 }}>
+            <button
+              className="cta-button modern-input-btn"
+              type="button"
+              style={{
+                marginTop: 0,
+                padding: '14px 25px',
+                borderRadius: '12px',
+                background: 'linear-gradient(90deg, #fff 0%, #f3f4f6 100%)',
+                color: '#ff5500',
+                fontWeight: 600,
+                fontFamily: 'Poppins, Inter, Arial, sans-serif',
+                fontSize: '1.08rem',
+                boxShadow: '0 2px 8px rgba(255, 122, 0, 0.10)',
+                border: '1.5px solid #ff7a00',
+                letterSpacing: '0.3px',
+                transition: 'all 0.2s',
+                cursor: 'pointer',
+              }}
+              onClick={() => window.open('https://wa.me/919381283935?text=I%20want%20to%20book%20a%20service', '_blank')}
+              onMouseOver={e => {
+                e.currentTarget.style.background = 'linear-gradient(90deg, #ff7a00 0%, #ff5500 100%)';
+                e.currentTarget.style.color = '#fff';
+                e.currentTarget.style.border = '1.5px solid #ff5500';
+              }}
+              onMouseOut={e => {
+                e.currentTarget.style.background = 'linear-gradient(90deg, #fff 0%, #f3f4f6 100%)';
+                e.currentTarget.style.color = '#ff5500';
+                e.currentTarget.style.border = '1.5px solid #ff7a00';
+              }}
+            >
+              Book a Service
+            </button>
+          </div>
         </div>
       </section>
       {/* Floating Call Button for Mobile */}
