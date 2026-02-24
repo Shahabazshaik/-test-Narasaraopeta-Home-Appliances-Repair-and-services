@@ -21,9 +21,9 @@ export default function ServiceCard({ service }) {
           position: 'relative',
           minHeight: '340px',
           borderRadius: '16px',
-          boxShadow: '0 2px 16px rgba(0,0,0,0.08)',
+          boxShadow: '0 4px 16px rgba(30,64,175,0.10)',
           overflow: 'hidden',
-          background: 'none',
+          background: 'linear-gradient(135deg, #f8fafc 0%, #e0e7ef 100%)',
         } : {}}
       >
         {service.bgImage && (
@@ -45,8 +45,9 @@ export default function ServiceCard({ service }) {
             <div style={{
               width: '100%',
               height: '100%',
-              background: 'rgba(255, 255, 255, 0.44)',
+              background: 'rgba(255, 255, 255, 0.60)',
               borderRadius: '16px',
+              backdropFilter: 'blur(2px)'
             }} />
           </div>
         )}

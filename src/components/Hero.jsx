@@ -2,8 +2,16 @@
 import './Hero.css'
 import { useEffect, useState, useRef } from 'react';
 
+function UpArrowIcon({ style }) {
+  return (
+    <svg style={style} xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M12 19a1 1 0 0 1-1-1V7.83l-4.29 4.3a1 1 0 1 1-1.42-1.42l6-6a1 1 0 0 1 1.42 0l6 6a1 1 0 1 1-1.42 1.42L13 7.83V18a1 1 0 0 1-1 1Z"/></svg>
+  );
+}
+
 export default function Hero() {
   const [showArrow, setShowArrow] = useState(true);
+  const [showUpArrow, setShowUpArrow] = useState(false);
+  const upArrowTimeout = useRef(null);
   const [isScrolling, setIsScrolling] = useState(false);
   const [waitingToShow, setWaitingToShow] = useState(false);
   const scrollTimeout = useRef(null);
@@ -58,6 +66,7 @@ export default function Hero() {
       observer = new window.IntersectionObserver(
         ([entry]) => {
           setShowArrow(!entry.isIntersecting);
+          if (entry.isIntersecting) setShowUpArrow(false);
         },
         { threshold: 0.1 }
       );
@@ -71,6 +80,16 @@ export default function Hero() {
       setWaitingToShow(true);
       if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
       if (showTimeout.current) clearTimeout(showTimeout.current);
+      if (upArrowTimeout.current) clearTimeout(upArrowTimeout.current);
+
+      setShowUpArrow(false);
+      upArrowTimeout.current = setTimeout(() => {
+        // Only show if not at top and not at contact section
+        if (window.scrollY > 100 && !(contactSection && contactSection.getBoundingClientRect().top < window.innerHeight && contactSection.getBoundingClientRect().bottom > 0)) {
+          setShowUpArrow(true);
+        }
+      }, 7000);
+
       scrollTimeout.current = setTimeout(() => {
         setIsScrolling(false);
         showTimeout.current = setTimeout(() => {
@@ -86,6 +105,7 @@ export default function Hero() {
       window.removeEventListener('scroll', handleScroll);
       if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
       if (showTimeout.current) clearTimeout(showTimeout.current);
+      if (upArrowTimeout.current) clearTimeout(upArrowTimeout.current);
     };
   }, []);
 
@@ -106,10 +126,27 @@ export default function Hero() {
         }}
       >
         <div className="hero-content hero-overlay">
-          <h2 style={{ color: '#f4f6f8', fontFamily: 'fangsong, ', fontWeight: 700, letterSpacing: '1px', textShadow: '0 6px 19px #0008' }}>
+          <h2 style={{
+            color: '#fff',
+            fontFamily: 'Poppins, Inter, Arial, sans-serif',
+            fontWeight: 600,
+            letterSpacing: '0.5px',
+            textShadow: '0 4px 16px #0006',
+            fontSize: '2.1rem',
+            marginBottom: 8,
+            lineHeight: 1.2
+          }}>
             {slides[currentSlide].title}
           </h2>
-          <p style={{ color: '#fff', fontFamily: '-moz-initial  ', fontWeight: 400, fontSize: '1.2rem', textShadow: '0 1px 4px #0007' }}>
+          <p style={{
+            color: '#e3e6ea',
+            fontFamily: 'Poppins, Inter, Arial, sans-serif',
+            fontWeight: 400,
+            fontSize: '1.15rem',
+            textShadow: '0 1px 6px #0005',
+            marginBottom: 0,
+            lineHeight: 1.5
+          }}>
             {slides[currentSlide].text}
           </p>
           {/* ...existing code... */}
@@ -125,7 +162,7 @@ export default function Hero() {
           <button
             className="cta-button"
             type="button"
-            style={{ marginTop: 64 }}
+            style={{ marginTop: 32 }}
             onClick={() => window.open('https://wa.me/919381283935?text=I%20want%20to%20book%20a%20service', '_blank')}
           >
             Book a Service
@@ -161,16 +198,49 @@ export default function Hero() {
             transition: 'background 0.1s',
           }}
         >
-          <span style={{ fontSize: 18, fontWeight: 'bold', whiteSpace: 'nowrap' }}>Call Now 9381283935</span>
+          <span style={{ fontSize: 18, fontWeight: 500, fontFamily: 'Poppins, Inter, Arial, sans-serif', letterSpacing: '0.5px', whiteSpace: 'nowrap' }}>Call Now 9381283935</span>
         </a>
+      )}
+      {/* Up Arrow Scroll-to-Top Button */}
+      {showUpArrow && (
+        <button
+          className="scroll-up-btn"
+          title="Scroll to top"
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          style={{
+            position: 'fixed',
+            left: 16,
+            bottom: 32,
+            zIndex: 9999,
+            background: '#0074D9',
+            borderRadius: '50%',
+            width: 48,
+            height: 48,
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            boxShadow: '0 4px 16px #0003',
+            border: 'none',
+            cursor: 'pointer',
+            transition: 'background 0.1s',
+            animation: 'blink-up-arrow 1.2s infinite',
+          }}
+        >
+          <UpArrowIcon style={{ width: 28, height: 28 }} />
+        </button>
       )}
       <style>{`
         @media (min-width: 768px) {
           .floating-call-btn { display: none !important; }
+          .scroll-up-btn { display: none !important; }
         }
         @keyframes blink-call {
           0%, 100% { box-shadow: 0 0 0 0 #25d36688; }
           100% { box-shadow: 0 0 0 56px #25d36633; }
+        }
+        @keyframes blink-up-arrow {
+          0%, 100% { box-shadow: 0 0 0 0 #0074D988; }
+          50% { box-shadow: 0 0 0 16px #0074D933; }
         }
       `}</style>
     </>

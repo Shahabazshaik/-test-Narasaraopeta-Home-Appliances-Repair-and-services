@@ -1,4 +1,7 @@
 @media (max-width: 768px) {
+  .hero {
+    background-color: #0074d9f6 !important; /* Blue background for mobile */
+  }
     .floating-call-btn {
       animation: blinkCallBtn 1.2s infinite !important;
     }
@@ -204,14 +207,16 @@
 
 .cta-badge {
   display: inline-block;
-  background: linear-gradient(90deg,#ff7a00,#ff5500);
-  color: white;
+  background: linear-gradient(90deg, #ffb347 0%, #ff5500 100%);
+  color: #fff;
   padding: 10px 22px;
   border-radius: 999px;
-  font-weight: 700;
-  font-size: 1rem;
-  box-shadow: 0 8px 24px rgba(255,122,0,0.18);
-  border: 1px solid rgba(255,255,255,0.08);
+  font-weight: 500;
+  font-size: 1.05rem;
+  box-shadow: 0 2px 8px rgba(255,122,0,0.12);
+  border: none;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  letter-spacing: 0.3px;
 }
 
 @media (max-width: 480px) {
@@ -238,21 +243,23 @@
 }
 
   .cta-button {
-    background: linear-gradient(90deg, #ff7a00 0%, #ff5500 100%);
+    background: linear-gradient(90deg, #ffb347 0%, #ff5500 100%);
     color: #fff;
-    padding: 18px 48px;
-    font-size: 1.25rem;
+    padding: 14px 38px;
+    font-size: 1.08rem;
     border-radius: 999px;
-    font-weight: 700;
+    font-weight: 500;
     border: none;
-    box-shadow: 0 0 24px 6px rgba(255, 122, 0, 0.25), 0 8px 24px rgba(255,122,0,0.18);
+    box-shadow: 0 2px 8px rgba(255, 122, 0, 0.12);
     cursor: pointer;
     transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-    margin-top: 24px;
-    animation: pulseBtn 1.2s infinite, blinkBtn 1.2s infinite;
+    margin-top: 18px;
+    animation: pulseBtn 1.2s infinite;
     outline: none;
     position: relative;
     z-index: 2;
+    font-family: 'Poppins', 'Inter', Arial, sans-serif;
+    letter-spacing: 0.3px;
   }
 
   .cta-button::after {
@@ -287,9 +294,9 @@
 }
 
 .cta-button:hover {
-  background-color: #c94d09;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(234, 88, 12, 0.6);
+  background: linear-gradient(90deg, #ff5500 0%, #ffb347 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 0 24px 6px rgba(255, 122, 0, 0.18), 0 8px 24px rgba(255,122,0,0.18);
 }
 
 .cta-button:active {

@@ -62,7 +62,20 @@ export default function Contact() {
               <h3>📞 Call Us</h3>
               <button
                 type="button"
-                style={{ background: '#1e40af', color: '#fff', fontWeight: 600, border: 'none', borderRadius: 8, padding: '8px 18px', fontSize: '1rem', cursor: 'pointer', marginBottom: 8 }}
+                style={{
+                  background: 'linear-gradient(90deg, #1e40af 0%, #2563eb 100%)',
+                  color: '#fff',
+                  fontWeight: 500,
+                  fontFamily: 'Poppins, Inter, Arial, sans-serif',
+                  border: 'none',
+                  borderRadius: 8,
+                  padding: '8px 18px',
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                  marginBottom: 8,
+                  boxShadow: '0 2px 8px rgba(30,64,175,0.10)',
+                  letterSpacing: '0.3px'
+                }}
                 onClick={() => window.open('tel:9381283935')}
               >
                 Call +91 9381283935
@@ -73,7 +86,20 @@ export default function Contact() {
               <h3>💬 WhatsApp</h3>
               <button
                 type="button"
-                style={{ background: '#25D366', color: '#fff', fontWeight: 600, border: 'none', borderRadius: 8, padding: '8px 18px', fontSize: '1rem', cursor: 'pointer', marginBottom: 8 }}
+                style={{
+                  background: 'linear-gradient(90deg, #25D366 0%, #13bfa6 100%)',
+                  color: '#fff',
+                  fontWeight: 500,
+                  fontFamily: 'Poppins, Inter, Arial, sans-serif',
+                  border: 'none',
+                  borderRadius: 8,
+                  padding: '8px 18px',
+                  fontSize: '1rem',
+                  cursor: 'pointer',
+                  marginBottom: 8,
+                  boxShadow: '0 2px 8px rgba(37,211,102,0.10)',
+                  letterSpacing: '0.3px'
+                }}
                 onClick={() => window.open('https://wa.me/919381283935?text=Hello%2C%20I%20want%20to%20book%20a%20service', '_blank')}
               >
                 Text Me on WhatsApp
