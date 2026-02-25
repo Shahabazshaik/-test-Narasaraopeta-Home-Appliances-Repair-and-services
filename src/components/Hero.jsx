@@ -191,6 +191,7 @@ export default function Hero() {
               }}
             >
               Book a Service
+              <h6>9381283935</h6>
             </button>
           </div>
         </div>
@@ -224,7 +225,7 @@ export default function Hero() {
             transition: 'background 0.1s',
           }}
         >
-          <span style={{ fontSize: 18, fontWeight: 500, fontFamily: 'Poppins, Inter, Arial, sans-serif', letterSpacing: '0.5px', whiteSpace: 'nowrap' }}>Call Now 9381283935</span>
+          <span style={{ fontSize: 18, fontWeight: 500, fontFamily: 'Poppins, Inter, Arial, sans-serif', letterSpacing: '0.5px', whiteSpace: 'nowrap' }}>Call 9381283935</span>
         </a>
       )}
       {/* Up Arrow Scroll-to-Top Button */}

@@ -23,8 +23,8 @@ export default function Header() {
     <header className={`header ${visible ? 'header--visible' : 'header--hidden'}`}>
       <div className="container">
         <div className="logo">
-          <h1> Narasaraopet Home Appliances Repair</h1>
-          <p>Professional Repair Services</p>
+          <h1>Home Appliances Repair at Door Step</h1>
+          <p> Narasaraopet Professional Repair Services</p>
         </div>
         <nav className="nav">
           <a href="#home">Home</a>
