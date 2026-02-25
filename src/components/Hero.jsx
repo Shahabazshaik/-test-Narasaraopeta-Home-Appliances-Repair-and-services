@@ -21,7 +21,7 @@ export default function Hero() {
   const slides = [
     {
       image: 'https://tse3.mm.bing.net/th/id/OIP.O5VQWO_WKedPH2En-GF93QHaE7?w=650&h=433&rs=1&pid=ImgDetMain&o=7&rm=3',
-      title: 'Welcome to Narasaraopeta Home Appliances Repair',
+      title: 'Welcome to  Home Appliances Repair',
       text:  'Your trusted home appliance repair service in Narasaraopeta.'
     },
     {
@@ -190,7 +190,8 @@ export default function Hero() {
                 e.currentTarget.style.border = '1.5px solid #ff7a00';
               }}
             >
-              Book a Service
+              Book a Service 
+              <FontAwesomeIcon icon={["fab", "whatsapp"]} size="sm" style={{color: "rgb(99, 230, 190)",}} />
               <h6>9381283935</h6>
             </button>
           </div>
