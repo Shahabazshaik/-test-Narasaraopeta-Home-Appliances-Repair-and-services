@@ -191,7 +191,7 @@ export default function Hero() {
               }}
             >
               Book a Service 
-              <FontAwesomeIcon icon={["fab", "whatsapp"]} size="sm" style={{color: "rgb(99, 230, 190)",}} />
+              {/* <FontAwesomeIcon icon={["fab", "whatsapp"]} size="sm" style={{color: "rgb(99, 230, 190)",}} /> */}
               <h6>9381283935</h6>
             </button>
           </div>
