@@ -1,4 +1,16 @@
 @media (max-width: 768px) {
+  .hero-mobile-service-text {
+    color: #f6f5f5;
+    font-size: 1.02rem;
+    margin-bottom: 10px;
+    text-align: center;
+    font-family: 'Poppins', 'Inter', Arial, sans-serif;
+    font-weight: bold;
+    line-height: 1.4;
+    padding: 0 4px;
+  }
+}
+@media (max-width: 768px) {
   .hero {
     background-color: #0074d9f6 !important; /* Blue background for mobile */
   }

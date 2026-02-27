@@ -159,6 +159,14 @@ export default function Hero() {
               <span className="cta-badge">Quick Response is Our Speciality and Reasonable Price</span>
             </div>
           </div>
+          {/* Mobile: show text under badge, Desktop: show below button */}
+          {window.innerWidth <= 768 && (
+            <div className="hero-mobile-service-text">
+             <sup> We are Service Provider for </sup>
+                 <strong> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, plumbing work & Repair Services in Narasaraopet-AndhraPradesh, plumber  in Narasaraopet-AndhraPradesh, current Repair Services in Narasaraopet-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh,</strong>
+                 <small>. We have Expert Team of Engineers, they have more than 10 years exprience.</small>
+            </div>
+          )}
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 8 }}>
             <button
               className="cta-button modern-input-btn"
@@ -194,6 +202,15 @@ export default function Hero() {
               {/* <FontAwesomeIcon icon={["fab", "whatsapp"]} size="sm" style={{color: "rgb(99, 230, 190)",}} /> */}
               <h6>9381283935</h6>
             </button>
+            {window.innerWidth > 768 && (
+              <div style={{marginTop: '18px', textAlign: 'center'}}>
+               
+                 <sup> We are Service Provider for </sup>
+               <strong> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, plumbing work & Repair Services in Narasaraopet-AndhraPradesh, plumber  in Narasaraopet-AndhraPradesh, current Repair Services in Narasaraopet-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh,</strong>
+                 <small>. We have Expert Team of Engineers, they have more than 10 years exprience.</small>
+                
+              </div>
+            )}
           </div>
         </div>
       </section>
