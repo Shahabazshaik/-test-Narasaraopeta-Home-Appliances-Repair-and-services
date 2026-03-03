@@ -1,24 +1,51 @@
 .why-choose-us-container {
   max-width: 800px;
-  margin: 32px auto;
-  padding: 16px 12px;
+  margin: 16px auto;
+  padding: 12px 8px;
   background: #fff;
   border-radius: 12px;
   box-shadow: 0 2px 16px rgba(0,0,0,0.04);
+  box-sizing: border-box;
+}
+@media (max-width: 600px) {
+  .why-choose-us-container {
+    max-width: 98vw;
+    margin: 8px auto;
+    padding: 8px 2vw;
+    border-radius: 8px;
+  }
+  .why-choose-us-container h1 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+  }
+  .why-choose-us-container section {
+    margin-bottom: 10px;
+  }
+  .why-choose-us-container h2 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+  }
+  .why-choose-us-container p {
+    font-size: 0.97rem;
+    line-height: 1.5;
+    margin-bottom: 4px;
+  }
+}
 }
 .why-choose-us-container h1 {
   text-align: center;
   color: #1a237e;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 .why-choose-us-container section {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 .why-choose-us-container h2 {
   color: #3949ab;
-  margin-bottom: 8px;
+  margin-bottom: 4px;
 }
 .why-choose-us-container p {
   color: #444;
-  line-height: 1.7;
+  line-height: 1.5;
+  margin-bottom: 2px;
 }
