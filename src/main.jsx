@@ -5,10 +5,12 @@ import ServiceDetails from './components/ServiceDetails';
 import ServiceDetailsPage from './components/ServiceDetailsPage';
 import './index.css'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/service/:id" element={<ServiceDetailsWrapper />} />
