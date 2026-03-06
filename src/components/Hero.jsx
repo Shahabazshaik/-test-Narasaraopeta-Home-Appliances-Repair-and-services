@@ -248,8 +248,8 @@ export default function Hero() {
               <div style={{marginTop: '18px', textAlign: 'center'}}>
                
                  <sup> We are Service Provider for </sup>
-               <strong> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, plumbing work & Repair Services in Narasaraopet-AndhraPradesh, plumber  in Narasaraopet-AndhraPradesh, current Repair Services in Narasaraopet-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh,</strong>
-                 <small>. We have Expert Team of Engineers, they have more than 10 years exprience.</small>
+               <strong> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, plumbing work & Repair Services in Narasaraopet-AndhraPradesh, plumber  in Narasaraopeta-AndhraPradesh, current Repair Services in Narasaraopeta-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh,</strong>
+                 <small>. We have Expert Team of Engineers, in Narasaraopeta they have more than 10 years exprience.</small>
                 
               </div>
             )}
