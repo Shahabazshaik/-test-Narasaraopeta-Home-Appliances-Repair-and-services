@@ -23,12 +23,16 @@ export default function Header() {
     <header className={`header ${visible ? 'header--visible' : 'header--hidden'}`}>
       <div className="container">
         <div className="logo">
-          <h1>Home Appliances Repair at Door Step</h1>
-          <p> Narasaraopet Professional Repair Services</p>
+          <h1>Narasaraopet Home Appliances & Electrical Services at Door Step</h1>
+          <p> Narasaraopet AC Repair | Washing Machine Repair | Fridge Repair | Electrical Works | Geyser Repair</p>
         </div>
         <nav className="nav">
           <a href="#home">Home</a>
           <a href="#services">Services</a>
+          <a href="/ac-repair-narasaraopet">AC Repair</a>
+          <a href="/washing-machine-repair-narasaraopet">Washing Machine Repair</a>
+          <a href="/fridge-repair-narasaraopet">Fridge Repair</a>
+          <a href="/electrical-services-narasaraopet">Electrical Services</a>
           <a href="#about">About</a>
           <a href="#testimonials">Reviews</a>
           <a href="#contact">Contact</a>

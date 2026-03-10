@@ -15,10 +15,10 @@ export default function Footer() {
           <div className="footer-section">
             <h4>Services</h4>
             <ul>
-              <li><a href="#services">Washing Machine Repair</a></li>
-              <li><a href="#services">Refrigerator Repair</a></li>
-              <li><a href="#services">AC Service</a></li>
-              <li><a href="#services">Electrical Work</a></li>
+              <li><a href="/washing-machine-repair-narasaraopet">Washing Machine Repair</a></li>
+              <li><a href="/fridge-repair-narasaraopet">Refrigerator Repair</a></li>
+              <li><a href="/ac-repair-narasaraopet">AC Service</a></li>
+              <li><a href="/electrical-services-narasaraopet">Electrical Work</a></li>
               <li><a href="#services">Geyser Repair</a></li>
               <li><a href="#services">Plumbing</a></li>
             </ul>
