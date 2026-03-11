@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from 'react'
 import './Header.css'
 
 export default function Header() {
@@ -27,17 +26,20 @@ export default function Header() {
           <p> Narasaraopet AC Repair | Washing Machine Repair | Fridge Repair | Electrical Works | Geyser Repair</p>
         </div>
         <nav className="nav">
-          <a href="#home">Home</a>
-          <a href="#services">Services</a>
-          <a href="/ac-repair-narasaraopet">AC Repair</a>
-          <a href="/washing-machine-repair-narasaraopet">Washing Machine Repair</a>
-          <a href="/fridge-repair-narasaraopet">Fridge Repair</a>
-          <a href="/electrical-services-narasaraopet">Electrical Services</a>
-          <a href="#about">About</a>
-          <a href="#testimonials">Reviews</a>
-          <a href="#contact">Contact</a>
+          {/* Use React Router Link for internal navigation */}
+          <Link to="/">Home</Link>
+          {/* <Link to="/services">Services</Link> */}
+          <Link to="/ac-repair-narasaraopet">AC Repair</Link>
+          <Link to="/washing-machine-repair-narasaraopet">Washing Machine Repair</Link>
+          <Link to="/fridge-repair-narasaraopet">Fridge Repair</Link>
+          <Link to="/electrical-services-narasaraopet">Electrical Services</Link>
+          <Link to="/about">About</Link>
+          <Link to="/testimonials">Reviews</Link>
+          <Link to="/contact">Contact</Link>
         </nav>
       </div>
     </header>
   )
 }
+// Add import for Link from react-router-dom
+import { Link } from 'react-router-dom';
