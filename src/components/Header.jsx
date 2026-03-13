@@ -1,5 +1,7 @@
-import { useState, useEffect, useRef } from 'react'
-import './Header.css'
+
+import { useState, useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
+import './Header.css';
 
 export default function Header() {
   const [showServices, setShowServices] = useState(false)
@@ -24,16 +26,16 @@ export default function Header() {
       <div className="container">
         <div className="logo">
           <h1>Narasaraopet Home Appliances & Electrical Services at Door Step</h1>
-          <p> Narasaraopet AC Repair | Washing Machine Repair | Fridge Repair | Electrical Works | Geyser Repair</p>
+          <h6>AC Repair | Washing Machine Repair | Fridge Repair | Electrical Works | Geyser Repair</h6>
         </div>
         <nav className="nav">
           <a href="#home">Home</a>
           {/* <a href="#services">Services</a> */}
-          <a href="/ac-repair-narasaraopet">AC Repair</a>
-          <a href="/washing-machine-repair-narasaraopet">Washing Machine Repair</a>
-          <a href="/fridge-repair-narasaraopet">Fridge Repair</a>
-          <a href="/electrical-services-narasaraopet">Electrical Services</a>
-          {/* <a href="#about">About</a> */}
+          <Link to="/ac-repair-narasaraopet">AC Repair</Link>
+          <Link to="/washing-machine-repair-narasaraopet">Washing Machine Repair</Link>
+          <Link to="/fridge-repair-narasaraopet">Fridge Repair</Link>
+          <Link to="/electrical-services-narasaraopet">Electrical Services</Link>
+          <a href="#about">About</a>
           {/* <a href="#testimonials">Reviews</a> */}
           <a href="#contact">Contact</a>
         </nav>

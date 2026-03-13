@@ -163,7 +163,7 @@ export default function Hero() {
           {window.innerWidth <= 768 && (
             <div className="hero-mobile-service-text">
              <sup> We are Service Provider for </sup>
-                 <strong> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, plumbing work & Repair Services in Narasaraopet-AndhraPradesh, plumber  in Narasaraopet-AndhraPradesh, current Repair Services in Narasaraopet-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh,</strong>
+                 <h5> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, plumbing work & Repair Services in Narasaraopet-AndhraPradesh, plumber  in Narasaraopet-AndhraPradesh, current Repair Services in Narasaraopet-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh,</h5>
                  <small>. We have Expert Team of Engineers, they have more than 10 years exprience.</small>
             </div>
           )}
@@ -212,14 +212,14 @@ export default function Hero() {
               aria-label="Chat on WhatsApp"
               style={{
                 position: 'fixed',
-                top: '85%',
+                top: '81%',
                 right: 9,
                 transform: 'translateY(-50%)',
                 background: '#25d366',
                 border: 'none',
                 borderRadius: '50%',
-                width: 56,
-                height: 56,
+                width: 45,
+                height: 45,
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
@@ -229,6 +229,7 @@ export default function Hero() {
                 transition: 'background 0.2s',
                 padding: 0,
                 textDecoration: 'none',
+                animation: 'bounce-call 1.1s infinite',
               }}
               onMouseOver={e => {
                 e.currentTarget.style.background = '#1ebe5d';
@@ -248,7 +249,7 @@ export default function Hero() {
               <div style={{marginTop: '18px', textAlign: 'center'}}>
                
                  <sup> We are Service Provider for </sup>
-               <strong> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, plumbing work & Repair Services in Narasaraopet-AndhraPradesh, plumber  in Narasaraopeta-AndhraPradesh, current Repair Services in Narasaraopeta-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh,</strong>
+               <h5> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, plumbing work & Repair Services in Narasaraopet-AndhraPradesh, plumber  in Narasaraopeta-AndhraPradesh, current Repair Services in Narasaraopeta-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh</h5>
                  <small>. We have Expert Team of Engineers, in Narasaraopeta they have more than 10 years exprience.</small>
                 
               </div>
@@ -276,7 +277,7 @@ export default function Hero() {
             alignItems: 'center',
             justifyContent: 'center',
             boxShadow: '0 4px 16px #0003',
-            animation: 'blink-call 1s infinite',
+            animation: 'bounce-call 1.1s infinite',
             color: '#fff',
             border: 'none',
             cursor: 'pointer',
@@ -326,9 +327,27 @@ export default function Hero() {
           .floating-call-btn { display: none !important; }
           .scroll-up-btn { display: none !important; }
         }
-        @keyframes blink-call {
-          0%, 100% { box-shadow: 0 0 0 0 #25d36688; }
-          100% { box-shadow: 0 0 0 56px #25d36633; }
+        @keyframes bounce-call {
+          0%, 100% {
+            transform: translateY(0);
+            box-shadow: 0 4px 16px #0003;
+          }
+          10% {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px #25d36644;
+          }
+          20% {
+            transform: translateY(-16px);
+            box-shadow: 0 12px 32px #25d36655;
+          }
+          30% {
+            transform: translateY(-8px);
+            box-shadow: 0 8px 24px #25d36644;
+          }
+          40% {
+            transform: translateY(0);
+            box-shadow: 0 4px 16px #0003;
+          }
         }
         @keyframes blink-up-arrow {
           0%, 100% { box-shadow: 0 0 0 0 #0074D988; }
