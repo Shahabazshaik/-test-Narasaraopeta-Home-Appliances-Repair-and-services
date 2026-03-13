@@ -26,7 +26,7 @@ export default function Header() {
       <div className="container">
         <div className="logo">
           <h1>Narasaraopet Home Appliances & Electrical Services at Door Step</h1>
-          <h6>AC Repair | Washing Machine Repair | Fridge Repair | Electrical Works | Geyser Repair</h6>
+          {/* <h6>AC Repair | Washing Machine Repair | Fridge Repair | Electrical Works | Geyser Repair</h6> */}
         </div>
         <nav className="nav">
           <a href="#home">Home</a>
