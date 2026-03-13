@@ -35,7 +35,7 @@ export default function Header() {
           <Link to="/washing-machine-repair-narasaraopet">Washing Machine Repair</Link>
           <Link to="/fridge-repair-narasaraopet">Fridge Repair</Link>
           <Link to="/electrical-services-narasaraopet">Electrical Services</Link>
-          <a href="#about">About</a>
+          {/* <a href="#about">About</a> */}
           {/* <a href="#testimonials">Reviews</a> */}
           <a href="#contact">Contact</a>
         </nav>
