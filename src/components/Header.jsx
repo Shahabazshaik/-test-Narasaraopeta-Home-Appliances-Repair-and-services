@@ -33,8 +33,8 @@ export default function Header() {
           <a href="/washing-machine-repair-narasaraopet">Washing Machine Repair</a>
           <a href="/fridge-repair-narasaraopet">Fridge Repair</a>
           <a href="/electrical-services-narasaraopet">Electrical Services</a>
-          <a href="#about">About</a>
-          <a href="#testimonials">Reviews</a>
+          {/* <a href="#about">About</a> */}
+          {/* <a href="#testimonials">Reviews</a> */}
           <a href="#contact">Contact</a>
         </nav>
       </div>
