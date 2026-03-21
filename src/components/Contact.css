@@ -1,3 +1,51 @@
+/* Responsive map and call button wrapper */
+.map-call-wrapper {
+  grid-column: 1 / -1;
+  margin: 32px 0;
+  text-align: center;
+}
+
+.map-call-wrapper iframe {
+  width: 100%;
+  max-width: 600px;
+  min-height: 220px;
+  border-radius: 12px;
+  border: 0;
+}
+
+.call-now-btn {
+  display: inline-block;
+  margin-top: 16px;
+  padding: 10px 24px;
+  background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+  color: #fff;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  box-shadow: 0 2px 8px rgba(30,64,175,0.10);
+  letter-spacing: 0.3px;
+  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  transition: background 0.2s;
+}
+
+.call-now-btn:active,
+.call-now-btn:focus {
+  background: #1e40af;
+}
+
+@media (max-width: 768px) {
+  .map-call-wrapper iframe {
+    min-height: 180px;
+    height: 220px;
+    max-width: 100vw;
+  }
+  .call-now-btn {
+    width: 90%;
+    font-size: 1rem;
+    padding: 12px 0;
+  }
+}
 .contact {
   background-color: var(--light-color);
 }

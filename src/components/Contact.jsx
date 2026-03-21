@@ -1,54 +1,41 @@
-import { useState } from 'react'
-import './Contact.css'
+
+import { useState } from 'react';
+import './Contact.css';
 
 export default function Contact() {
-  // Replace with your real email address so form submissions are sent to you
-  const OWNER_EMAIL = 'youremail@example.com'
-
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     phone: '',
     service: '',
     message: ''
-  })
-
-  const [rating, setRating] = useState(0)
+  });
 
   const handleChange = (e) => {
-    const { name, value } = e.target
-    setFormData(prev => ({
+    const { name, value } = e.target;
+    setFormData((prev) => ({
       ...prev,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
   const handleSubmit = (e) => {
-    e.preventDefault()
-
+    e.preventDefault();
     // Build WhatsApp message
-    const phoneNumber = '919390609601'; // WhatsApp number in international format, no +
+    const phoneNumber = '919390609601';
     const messageLines = [
       `Name: ${formData.name}`,
       `Email: ${formData.email}`,
       `Phone: ${formData.phone}`,
       `Service: ${formData.service}`,
-      `Rating: ${rating} / 5`,
-      formData.message ? `Message: ${formData.message}` : ''
+      formData.message ? `Message: ${formData.message}` : '',
     ].filter(Boolean);
     const message = encodeURIComponent(messageLines.join('\n'));
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(whatsappUrl, '_blank');
-
-    // Local feedback and reset
     alert('Your request will be sent via WhatsApp.');
     setFormData({ name: '', email: '', phone: '', service: '', message: '' });
-    setRating(0);
-  }
-
-  const handleStarClick = (value) => {
-    setRating(value)
-  }
+  };
 
   return (
     <section id="contact" className="contact">
@@ -113,17 +100,18 @@ export default function Contact() {
           </div>
 
           {/* Google Maps Embed */}
-          <div style={{ gridColumn: '1 / -1', margin: '32px 0', textAlign: 'center' }}>
+          <div className="map-call-wrapper">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.745499157957!2d80.03364167460322!3d16.233518435019935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a81139be02dd9%3A0xb0d8a129b97d8797!2sNarasaraopet%20Home%20Appliances%20Repair%20at%20doorstep!5e0!3m2!1sen!2sin!4v1774110395119!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.7455991202883!2d80.0362166!3d16.2335133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a81139be02dd9%3A0xb0d8a129b97d8797!2sNarasaraopet%20Home%20Appliances%20Repair%20at%20doorstep!5e0!3m2!1sen!2sin!4v1774113200770!5m2!1sen!2sin"
               width="100%"
-              height="400"
-              style={{ border: 0, borderRadius: 12, maxWidth: 600, width: '100%' }}
+              height="450"
+              style={{ border: 0, borderRadius: 12, maxWidth: 600, width: '100%', minHeight: 220 }}
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Narasaraopet Home Appliances Repair at doorstep Map"
             ></iframe>
+            <a href="tel:9381283935" className="call-now-btn">Call Now</a>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
