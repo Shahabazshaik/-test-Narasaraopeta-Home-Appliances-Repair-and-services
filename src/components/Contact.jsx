@@ -55,7 +55,6 @@ export default function Contact() {
       <div className="container">
         <h2>Contact Us</h2>
         <p className="section-subtitle">Get in touch for a free quote or emergency service</p>
-        
         <div className="contact-wrapper">
           <div className="contact-info">
             <div className="info-item">
@@ -111,6 +110,20 @@ export default function Contact() {
               <p>Monday - Sunday: 8:00 AM - 10:00 PM</p>
               <p>Emergency Service: 24/7</p>
             </div>
+          </div>
+
+          {/* Google Maps Embed */}
+          <div style={{ gridColumn: '1 / -1', margin: '32px 0', textAlign: 'center' }}>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.745499157957!2d80.03364167460322!3d16.233518435019935!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a81139be02dd9%3A0xb0d8a129b97d8797!2sNarasaraopet%20Home%20Appliances%20Repair%20at%20doorstep!5e0!3m2!1sen!2sin!4v1774110395119!5m2!1sen!2sin"
+              width="100%"
+              height="400"
+              style={{ border: 0, borderRadius: 12, maxWidth: 600, width: '100%' }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Narasaraopet Home Appliances Repair at doorstep Map"
+            ></iframe>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
