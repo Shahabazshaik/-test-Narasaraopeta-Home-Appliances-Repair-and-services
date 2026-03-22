@@ -23,8 +23,10 @@ export default function Header() {
 
   return (
     <header className={`header ${visible ? 'header--visible' : 'header--hidden'}`}>
-      <div className="container">
+      <div className="container"> 
+         {/* <h6>call now9381283935</h6> */}
         <div className="logo">
+        
           <h1>Narasaraopet Home Appliances & Electrical Services at Door Step</h1>
           {/* <h6>AC Repair | Washing Machine Repair | Fridge Repair | Electrical Works | Geyser Repair</h6> */}
         </div>
