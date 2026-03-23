@@ -30,6 +30,11 @@ export default function Hero() {
       text: 'Fast and Reliable Washing Machine Repair Services.'
     },
     {
+      image: 'https://t4.ftcdn.net/jpg/05/11/92/95/360_F_511929539_hkrzPKGI6pEA8TwUfrwrB0g73FyEaowM.jpg',
+      title: 'AC Repair',
+      text: 'Professional AC Repair and Maintenance Services.'
+    },
+    {
       image: 'https://media.istockphoto.com/id/847612846/photo/male-technician-checking-refrigerator.webp?a=1&b=1&s=612x612&w=0&k=20&c=4LvYNl7-vaix9ICCL-rDI3_zietH0IvJQH3tArecqfw=',
       title: 'Refrigerator Repair',
       text: 'Expert Refrigerator Repair Services.'
