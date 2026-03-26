@@ -17,11 +17,23 @@
       gtag('js', new Date());
       gtag('config', 'G-ZMS0704TYF');
     </script>
-    <!-- Google tag (gtag.js) event -->
+    <!-- Google tag (gtag.js) event - delayed navigation helper -->
     <script>
-      gtag('event', 'ads_conversion_Book_appointment_1', {
-        // <event_parameters>
-      });
+      // Helper function to delay opening a URL until a gtag event is sent.
+      // Call it in response to an action that should navigate to a URL.
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'ads_conversion_Book_appointment_1', {
+          'event_callback': callback,
+          'event_timeout': 2000,
+          // <event_parameters>
+        });
+        return false;
+      }
     </script>
     <meta charset="UTF-8" />
     <!-- Google Search Console Verification -->
@@ -31,7 +43,7 @@
     <title>Narasaraopet Home Appliances Repair | AC, Fridge, Washing Machine, Electrical Services</title>
     <meta name="description" content="Top-rated home appliance repair in Narasaraopet & nearby. AC, fridge, washing machine, geyser, and electrical repairs. Fast doorstep service. Call 9381283935." />
     <meta name="author" content="Narasaraopeta Home Appliances Repair" />
-    <meta name="keywords" content="best Air Conditioner repair in Narasaraopeta,best AC repair in  Narasaraopeta,AC repair near me,AC repair near me shop,split Ac installation,Air conditioning repair,Ac repair services AC service near me, daikin Ac service in  Narasaraopeta,Daikin AC repair in Narasaraopet,lG AC repair in Narasaraopet,LG Ac service in  Narasaraopeta, mitsubishi  Ac service in  Narasaraopeta, mitsubishi AC repair in Narasaraopet, washing machine repair near me ,lg washing machine repair,samsung washing machine repair,bosch washing machine repair,washing machine repair in narasaraopeta,washing machine repair shop near me ,best washing machine repair,washing machine repair,geyser repair near me,geyser repair in narasaraopeta, best geyser repair,geyser repair,electricalwork in narasaraopeta, best electrical works,best refrigerator repair,near me electrician, eletrical work,eletricians work,Top electrician in Narasaraopeta, best home appliance service,AC repair Narasaraopet, fridge repair, washing machine repair, geyser repair, electrical works, home appliance service, Narasaraopeta, doorstep repair" />
+    <meta name="keywords" content="best Air Conditioner repair in Narasaraopeta,best AC repair in  Narasaraopeta,AC repair near me,AC repair near me shop,split Ac installation,Air conditioning repair,Ac repair services, AC service near me, daikin Ac service in  Narasaraopeta,Daikin AC repair in Narasaraopet,lG AC repair in Narasaraopet,LG Ac service in  Narasaraopeta, mitsubishi  Ac service in  Narasaraopeta, mitsubishi AC repair in Narasaraopet,Ac repair in Narasaraopeta, washing machine repair near me ,lg washing machine repair,samsung washing machine repair,bosch washing machine repair,washing machine repair in narasaraopeta,washing machine repair shop near me ,best washing machine repair,washing machine repair,geyser repair near me,geyser repair in narasaraopeta, best geyser repair,geyser repair,electricalwork in narasaraopeta, best electrical works,best refrigerator repair,near me electrician, eletrical work,eletricians work,Top electrician in Narasaraopeta, best home appliance service,AC repair Narasaraopet, fridge repair, washing machine repair, geyser repair, electrical works, home appliance service, Narasaraopeta, doorstep repair" />
     <meta property="og:title" content="Narasaraopeta Home Appliances Repair & Services" />
     <meta property="og:description" content="Fast, reliable, and affordable home appliance repair services in Narasaraopeta. AC, Washing Machine, Geyser, Refrigerator & Electrical Works." />
     <meta property="og:type" content="website" />
