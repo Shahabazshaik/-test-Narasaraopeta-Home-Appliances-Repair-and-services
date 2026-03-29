@@ -45,6 +45,10 @@ export default function Contact() {
         <div className="contact-wrapper">
           <div className="contact-info">
             <div className="info-item">
+              <h3>📍 Address</h3>
+              <p>Ramireddy pet, Narasaraopet, Andhra Pradesh, India</p>
+            </div>
+            <div className="info-item">
               <h3>📞 Call Us</h3>
               <button
                 type="button"

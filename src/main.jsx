@@ -25,11 +25,24 @@ const fridgeService = {
   description: 'Our fridge service covers cooling issues, gas refilling, compressor replacement, and thermostat problems. We use genuine parts for all repairs.',
   bgImage: 'https://www.heisesplumbing.com/site/wp-content/uploads/refrigerator-repair-1.jpg',
 };
+
 const electricalService = {
   id: 4,
   title: 'Electrical Services in Narasaraopet',
   description: 'Safe and professional electrical work for homes, including new wiring, switchboard installation, and fault repairs.',
   bgImage: 'https://pictures-ghana.jijistatic.net/54889012_NjIwLTc3Ni1lNzYzMThlZDFm.webp',
+};
+const geyserService = {
+  id: 5,
+  title: 'Geyser Repair in Narasaraopet',
+  description: 'Expert installation and repair for all types of geysers. We fix heating issues, leaks, and electrical faults.',
+  bgImage: 'https://5.imimg.com/data5/SELLER/Default/2022/7/IG/GL/GL/1517266/instant-geyser-repairing-service-500x500.jpg',
+};
+const otherHomeAppliancesService = {
+  id: 7,
+  title: 'Other Home Appliances Repair in Narasaraopet',
+  description: 'Comprehensive repair and service for all home appliances. Genuine parts and certified technicians.',
+  bgImage: 'https://www.lg.com/in/images/washing-machines/md07518199/gallery/medium01.jpg',
 };
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -43,6 +56,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/washing-machine-repair-narasaraopet" element={<ServiceDetailsPage service={washingMachineService} />} />
           <Route path="/fridge-repair-narasaraopet" element={<ServiceDetailsPage service={fridgeService} />} />
           <Route path="/electrical-services-narasaraopet" element={<ServiceDetailsPage service={electricalService} />} />
+          <Route path="/geyser-repair-narasaraopet" element={<ServiceDetailsPage service={geyserService} />} />
+          <Route path="/other-home-appliances-repair" element={<ServiceDetailsPage service={otherHomeAppliancesService} />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>,
