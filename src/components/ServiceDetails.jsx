@@ -29,11 +29,6 @@ export default function ServiceDetails({ service }) {
       types: 'Instant, Storage, Gas Geysers',
       extra: 'Expert installation and repair for all types of geysers. We fix heating issues, leaks, and electrical faults.'
     },
-    6: {
-      brands: 'All major plumbing brands',
-      types: 'Kitchen, Bathroom, Water Tank, Piping',
-      extra: 'Professional plumbing services for leakages, blockages, and installations. Fast and reliable solutions.'
-    },
     7: {
       brands: 'LG, Samsung, Whirlpool, IFB, Bosch, Haier, Panasonic, Godrej, Voltas Beko, Siemens',
       types: 'All Home Appliances',
