@@ -169,42 +169,13 @@ export default function Hero() {
                  <small>. We have Expert Team of Engineers, they have more than 10 years exprience.</small>
             </div>
           )}
-          <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: 8 }}>
+          <div className="hero-cta-row">
             <button
               className="cta-button modern-input-btn"
               type="button"
-              style={{
-                marginTop: 0,
-                padding: '14px 25px',
-                borderRadius: '12px',
-                background: '#25d366',
-                color: '#fff',
-                fontWeight: 600,
-                fontFamily: 'Poppins, Inter, Arial, sans-serif',
-                fontSize: '1.08rem',
-                boxShadow: '0 2px 8px rgba(37, 211, 102, 0.10)',
-                border: '1.5px solid #25d366',
-                letterSpacing: '0.3px',
-                transition: 'all 0.2s',
-                cursor: 'pointer',
-                display: 'flex',
-                alignItems: 'center',
-                gap: 10,
-              }}
               onClick={() => window.open('https://wa.me/919381283935?text=I%20want%20to%20book%20a%20service', '_blank')}
-              onMouseOver={e => {
-                e.currentTarget.style.background = '#1ebe5d';
-                e.currentTarget.style.color = '#fff';
-                e.currentTarget.style.border = '1.5px solid #1ebe5d';
-              }}
-              onMouseOut={e => {
-                e.currentTarget.style.background = '#25d366';
-                e.currentTarget.style.color = '#fff';
-                e.currentTarget.style.border = '1.5px solid #25d366';
-              }}
             >
               Book a Service
-              {/* <h6 style={{margin: 0, marginLeft: 8, fontWeight: 600, fontSize: '1.08rem', color: '#fff'}}>9381283935</h6> */}
             </button>
             {/* WhatsApp icon floating button, fixed at middle right */}
             <a
@@ -212,33 +183,7 @@ export default function Hero() {
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Chat on WhatsApp"
-              style={{
-                position: 'fixed',
-                top: '81%',
-                right: 9,
-                transform: 'translateY(-50%)',
-                background: '#25d366',
-                border: 'none',
-                borderRadius: '50%',
-                width: 45,
-                height: 45,
-                display: 'flex',
-                alignItems: 'center',
-                justifyContent: 'center',
-                boxShadow: '0 4px 16px #25d36655',
-                cursor: 'pointer',
-                zIndex: 9999,
-                transition: 'background 0.2s',
-                padding: 0,
-                textDecoration: 'none',
-                animation: 'bounce-call 1.1s infinite',
-              }}
-              onMouseOver={e => {
-                e.currentTarget.style.background = '#1ebe5d';
-              }}
-              onMouseOut={e => {
-                e.currentTarget.style.background = '#25d366';
-              }}
+              className="whatsapp-float"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 32 32" style={{display: 'block'}}>
                 <g>
