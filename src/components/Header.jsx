@@ -127,9 +127,9 @@ export default function Header() {
         </div>
       )}
       <div className="container"> 
-        <div className="logo" style={{ marginLeft: '56px' }}>
-          <h1>Narasaraopet Home Appliances & Electrical Services at Door Step</h1>
-        </div>
+        <div className="logo">
+            <h1>Narasaraopet Home Appliances at Door Step</h1>
+          </div>
         <nav className="nav" style={{ position: 'relative' }}>
           {/* <a href="#home">Home</a>
           <a href="#contact">Contact</a> */}

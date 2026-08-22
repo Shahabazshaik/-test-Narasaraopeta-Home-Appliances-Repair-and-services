@@ -1,7 +1,8 @@
 .header-phone-corner {
   position: absolute;
-    top: 2px;
-  right: 18px;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
   font-size: 0.92rem;
   color: #fff;
   /* background: rgba(30,64,175,0.92); */
@@ -22,7 +23,6 @@
   0%, 100% { opacity: 1; box-shadow: 0 2px 8px #0002; }
   50% { opacity: 0.5; box-shadow: 0 0 12px 2px #ffe082; }
 }
-}
 .header-phone-corner:hover {
   background: #2563eb;
   color: #ffe082;
@@ -34,11 +34,14 @@
 
 @media (max-width: 768px) {
   .header-phone-corner {
+    position: static;
+    transform: none;
     font-size: 0.98rem;
     top: 6px;
-    right: 8px;
-    padding: 2px 7px 2px 5px;
-    border-radius: 9px;
+    padding: 8px 0;
+    border-radius: 10px;
+    width: 100%;
+    justify-content: center;
   }
 }
 .header .container {
@@ -85,6 +88,9 @@
   font-size: 1.4rem;
   margin: 0;
   font-weight: 700;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .logo p {
@@ -154,7 +160,6 @@
     justify-content: center;
   }
 }
-}
 .header-phone:hover {
   background: rgba(0,0,0,0.22);
   color: #ffe082;
@@ -163,9 +168,6 @@
   font-size: 0.95em;
   font-weight: 600;
 }
-  position: relative;
-}
-
 .nav a:hover {
   opacity: 0.85;
 }
