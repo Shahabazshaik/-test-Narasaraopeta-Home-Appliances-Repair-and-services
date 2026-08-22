@@ -144,9 +144,9 @@ export default function Header() {
       <div className="container">
         <div className="logo">
           <h1>
-            <span className="heading-line1">Narasaraopet Home Appliances</span>
+            <span className="heading-line1">Narasaraopet Home Appliancesrepair at Door Step</span>
             <br />
-            <span className="heading-line2">repair at Door Step</span>
+            <span className="heading-line2">Repairs & services at your doorstep in Narasaraopet</span>
           </h1>
         </div>
         <nav className="nav">
