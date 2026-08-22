@@ -15,13 +15,18 @@ interface Options {
    * Note: Skipping React import with classic runtime is not supported from v4
    * @default "automatic"
    */
-  jsxRuntime?: 'classic' | 'automatic';
+  jsxRuntime?: "classic" | "automatic";
   /**
    * Babel configuration applied in both dev and prod.
    */
-  babel?: BabelOptions | ((id: string, options: {
-    ssr?: boolean;
-  }) => BabelOptions);
+  babel?:
+    | BabelOptions
+    | ((
+        id: string,
+        options: {
+          ssr?: boolean;
+        },
+      ) => BabelOptions);
   /**
    * React Fast Refresh runtime URL prefix.
    * Useful in a module federation context to enable HMR by specifying
@@ -35,20 +40,32 @@ interface Options {
    */
   disableOxcRecommendation?: boolean;
 }
-type BabelOptions = Omit<TransformOptions, 'ast' | 'filename' | 'root' | 'sourceFileName' | 'sourceMaps' | 'inputSourceMap'>;
+type BabelOptions = Omit<
+  TransformOptions,
+  | "ast"
+  | "filename"
+  | "root"
+  | "sourceFileName"
+  | "sourceMaps"
+  | "inputSourceMap"
+>;
 /**
  * The object type used by the `options` passed to plugins with
  * an `api.reactBabel` method.
  */
 interface ReactBabelOptions extends BabelOptions {
-  plugins: Extract<BabelOptions['plugins'], any[]>;
-  presets: Extract<BabelOptions['presets'], any[]>;
-  overrides: Extract<BabelOptions['overrides'], any[]>;
+  plugins: Extract<BabelOptions["plugins"], any[]>;
+  presets: Extract<BabelOptions["presets"], any[]>;
+  overrides: Extract<BabelOptions["overrides"], any[]>;
   parserOpts: ParserOptions & {
-    plugins: Extract<ParserOptions['plugins'], any[]>;
+    plugins: Extract<ParserOptions["plugins"], any[]>;
   };
 }
-type ReactBabelHook = (babelConfig: ReactBabelOptions, context: ReactBabelHookContext, config: ResolvedConfig) => void;
+type ReactBabelHook = (
+  babelConfig: ReactBabelOptions,
+  context: ReactBabelHookContext,
+  config: ResolvedConfig,
+) => void;
 type ReactBabelHookContext = {
   ssr: boolean;
   id: string;
@@ -64,4 +81,10 @@ declare namespace viteReact {
   var preambleCode: string;
 }
 //#endregion
-export { BabelOptions, Options, ReactBabelOptions, ViteReactPluginApi, viteReact as default };
+export {
+  BabelOptions,
+  Options,
+  ReactBabelOptions,
+  ViteReactPluginApi,
+  viteReact as default,
+};

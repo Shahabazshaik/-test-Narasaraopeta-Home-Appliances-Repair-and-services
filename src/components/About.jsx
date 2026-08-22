@@ -1,4 +1,4 @@
-import './About.css'
+import "./About.css";
 
 export default function About() {
   return (
@@ -8,7 +8,12 @@ export default function About() {
           <div className="about-text">
             <h2>About Us</h2>
             <p>
-              With over 10 years of experience in home appliances and electrical repair, we have become the trusted choice for homeowners and businesses. Our team of certified technicians is dedicated to providing quick, reliable, and affordable repair services for washing machines, refrigerators, air conditioners, electrical systems, geysers, and plumbing needs.
+              With over 10 years of experience in home appliances and electrical
+              repair, we have become the trusted choice for homeowners and
+              businesses. Our team of certified technicians is dedicated to
+              providing quick, reliable, and affordable repair services for
+              washing machines, refrigerators, air conditioners, electrical
+              systems, geysers, and plumbing needs.
             </p>
             <div className="stats">
               <div className="stat">
@@ -33,5 +38,5 @@ export default function About() {
         </div>
       </div>
     </section>
-  )
+  );
 }

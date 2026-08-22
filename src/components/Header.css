@@ -1,6 +1,6 @@
 .header-phone-corner {
   position: absolute;
-    top: 2px;
+  top: 2px;
   right: 18px;
   font-size: 0.92rem;
   color: #fff;
@@ -15,12 +15,19 @@
   box-shadow: 0 2px 8px #0002;
   font-weight: 500;
   transition: background 0.18s;
-    animation: blinkPhone 1.1s infinite;
+  animation: blinkPhone 1.1s infinite;
 }
 
 @keyframes blinkPhone {
-  0%, 100% { opacity: 1; box-shadow: 0 2px 8px #0002; }
-  50% { opacity: 0.5; box-shadow: 0 0 12px 2px #ffe082; }
+  0%,
+  100% {
+    opacity: 1;
+    box-shadow: 0 2px 8px #0002;
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 12px 2px #ffe082;
+  }
 }
 .header-phone-corner:hover {
   background: #2563eb;
@@ -44,14 +51,20 @@
   position: relative;
 }
 .header {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+  background: linear-gradient(
+    135deg,
+    var(--primary-color) 0%,
+    var(--secondary-color) 100%
+  );
   color: white;
   padding: 20px 0;
   box-shadow: var(--shadow);
   position: sticky;
   top: 0;
   z-index: 1000;
-  transition: transform 0.28s ease, opacity 0.28s ease;
+  transition:
+    transform 0.28s ease,
+    opacity 0.28s ease;
   will-change: transform;
 }
 
@@ -119,7 +132,7 @@
   margin-left: 24px;
   font-size: 0.95rem;
   color: #fff;
-  background: rgba(0,0,0,0.10);
+  background: rgba(0, 0, 0, 0.1);
   padding: 4px 10px;
   border-radius: 16px;
   text-decoration: none;
@@ -157,6 +170,9 @@
     text-align: center;
     padding: 0 2px;
   }
+  .logo {
+    padding-top: 8px;
+  }
   .nav {
     flex-wrap: wrap;
     gap: 10px;
@@ -164,7 +180,7 @@
   }
 }
 .header-phone:hover {
-  background: rgba(0,0,0,0.22);
+  background: rgba(0, 0, 0, 0.22);
   color: #ffe082;
 }
 .header-phone-number {
@@ -176,13 +192,13 @@
 }
 
 .nav a::after {
-  content: '';
+  content: "";
   position: absolute;
   bottom: -6px;
   left: 0;
-     background: none;
+  background: none;
   height: 2px;
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   transition: width 0.2s ease;
 }
 
@@ -210,6 +226,9 @@
   .logo h1 {
     font-size: 1.1rem;
   }
+  .logo {
+    padding-top: 8px;
+  }
 }
 
 /* New classes moved from inline styles in Header.jsx */
@@ -224,7 +243,10 @@
   font-size: 2.2rem;
   z-index: 1100;
 }
-.hamburger span { display: block; line-height: 1; }
+.hamburger span {
+  display: block;
+  line-height: 1;
+}
 
 .header-mini-menu {
   position: absolute;
@@ -244,14 +266,32 @@
   pointer-events: auto;
 }
 
-.mini-menu-link { color: #e8ecef; text-decoration: none; }
-.mini-menu-link:nth-child(2) { color: #e5ebf0; }
-.mini-menu-link:nth-child(3) { color: #eef2f6; }
-.mini-menu-link:nth-child(4) { color: #ebeef1; }
-.mini-menu-link:nth-child(5) { color: #e8ebee; }
-.mini-menu-link:nth-child(6) { color: #f1f5f9; }
+.mini-menu-link {
+  color: #e8ecef;
+  text-decoration: none;
+}
+.mini-menu-link:nth-child(2) {
+  color: #e5ebf0;
+}
+.mini-menu-link:nth-child(3) {
+  color: #eef2f6;
+}
+.mini-menu-link:nth-child(4) {
+  color: #ebeef1;
+}
+.mini-menu-link:nth-child(5) {
+  color: #e8ebee;
+}
+.mini-menu-link:nth-child(6) {
+  color: #f1f5f9;
+}
 
-.dropdown-link { display: block; padding: 0.75rem 1.5rem; color: #005baa; text-decoration: none; }
+.dropdown-link {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #005baa;
+  text-decoration: none;
+}
 
 .services-dropdown {
   position: absolute;
@@ -264,8 +304,15 @@
   min-width: 220px;
   padding: 0.5rem 0;
 }
-.dropdown-link { display: block; padding: 0.75rem 1.5rem; color: #005baa; text-decoration: none; }
+.dropdown-link {
+  display: block;
+  padding: 0.75rem 1.5rem;
+  color: #005baa;
+  text-decoration: none;
+}
 
 @media (max-width: 480px) {
-  .header-mini-menu { display: none; }
+  .header-mini-menu {
+    display: none;
+  }
 }

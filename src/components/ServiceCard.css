@@ -4,7 +4,9 @@
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
   text-align: center;
-  transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  transition:
+    transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
   border-top: 4px solid var(--primary-color);
   opacity: 0;
   transform: translateY(40px);
@@ -12,7 +14,6 @@
 .service-card.visible {
   opacity: 1;
   transform: translateY(0);
-}
 }
 
 .service-card:hover {
@@ -79,19 +80,26 @@
   font-size: 0.9rem;
 }
 
- .service-button {
-   background-color: var(--primary-color);
-   color: rgb(255, 255, 255);
-   padding: 10px 25px;
-   border-radius: var(--border-radius);
-   font-weight: 600;
-   transition: all 0.3s ease;
-   width: 100%;
-   animation: blink-service-btn 1.2s infinite;
- }
+.service-button {
+  background-color: var(--primary-color);
+  color: rgb(255, 255, 255);
+  padding: 10px 25px;
+  border-radius: var(--border-radius);
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+  animation: blink-service-btn 1.2s infinite;
+}
 @keyframes blink-service-btn {
-  0%, 100% { box-shadow: 0 0 0 0 var(--primary-color); opacity: 1; }
-  50% { box-shadow: 0 0 16px 4px var(--secondary-color); opacity: 0.7; }
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 var(--primary-color);
+    opacity: 1;
+  }
+  50% {
+    box-shadow: 0 0 16px 4px var(--secondary-color);
+    opacity: 0.7;
+  }
 }
 
 .service-button:hover {
@@ -100,7 +108,8 @@
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {

@@ -1,11 +1,22 @@
-
-import './Hero.css'
-import { useEffect, useState, useRef } from 'react';
-import MobileCTA from './MobileCTA'
+import "./Hero.css";
+import { useEffect, useState, useRef } from "react";
+import MobileCTA from "./MobileCTA";
 
 function UpArrowIcon({ style }) {
   return (
-    <svg style={style} xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none" viewBox="0 0 24 24"><path fill="#fff" d="M12 19a1 1 0 0 1-1-1V7.83l-4.29 4.3a1 1 0 1 1-1.42-1.42l6-6a1 1 0 0 1 1.42 0l6 6a1 1 0 1 1-1.42 1.42L13 7.83V18a1 1 0 0 1-1 1Z"/></svg>
+    <svg
+      style={style}
+      xmlns="http://www.w3.org/2000/svg"
+      width="32"
+      height="32"
+      fill="none"
+      viewBox="0 0 24 24"
+    >
+      <path
+        fill="#fff"
+        d="M12 19a1 1 0 0 1-1-1V7.83l-4.29 4.3a1 1 0 1 1-1.42-1.42l6-6a1 1 0 0 1 1.42 0l6 6a1 1 0 1 1-1.42 1.42L13 7.83V18a1 1 0 0 1-1 1Z"
+      />
+    </svg>
   );
 }
 
@@ -21,36 +32,41 @@ export default function Hero() {
   // Slideshow logic with text sync
   const slides = [
     {
-      image: 'https://tse3.mm.bing.net/th/id/OIP.O5VQWO_WKedPH2En-GF93QHaE7?w=650&h=433&rs=1&pid=ImgDetMain&o=7&rm=3',
-      title: 'Welcome to Narasaraopet Home Appliances repair at Door Step',
-      text:  'Your trusted home appliance repair service in Narasaraopeta.'
+      image:
+        "https://tse3.mm.bing.net/th/id/OIP.O5VQWO_WKedPH2En-GF93QHaE7?w=650&h=433&rs=1&pid=ImgDetMain&o=7&rm=3",
+      title: "Welcome to Narasaraopet Home Appliances repair at Door Step",
+      text: "Your trusted home appliance repair service in Narasaraopeta.",
     },
     {
-      image: 'https://media.istockphoto.com/id/2140182550/photo/a-repairman-using-a-screwdriver-to-removes-the-front-lid-of-a-washing-machine.jpg?s=612x612&w=0&k=20&c=B4ctP71R7Gr2_XLacOqOpLpeiMYJfyZtTf_Y_3K2uxQ=',
-      title: 'Washing Machine Repair',
-      text: 'Fast and Reliable Washing Machine Repair Services.'
+      image:
+        "https://media.istockphoto.com/id/2140182550/photo/a-repairman-using-a-screwdriver-to-removes-the-front-lid-of-a-washing-machine.jpg?s=612x612&w=0&k=20&c=B4ctP71R7Gr2_XLacOqOpLpeiMYJfyZtTf_Y_3K2uxQ=",
+      title: "Washing Machine Repair",
+      text: "Fast and Reliable Washing Machine Repair Services.",
     },
     {
-      image: 'https://t4.ftcdn.net/jpg/05/11/92/95/360_F_511929539_hkrzPKGI6pEA8TwUfrwrB0g73FyEaowM.jpg',
-      title: 'AC Repair',
-      text: 'Professional AC Repair and Maintenance Services.'
+      image:
+        "https://t4.ftcdn.net/jpg/05/11/92/95/360_F_511929539_hkrzPKGI6pEA8TwUfrwrB0g73FyEaowM.jpg",
+      title: "AC Repair",
+      text: "Professional AC Repair and Maintenance Services.",
     },
     {
-      image: 'https://media.istockphoto.com/id/847612846/photo/male-technician-checking-refrigerator.webp?a=1&b=1&s=612x612&w=0&k=20&c=4LvYNl7-vaix9ICCL-rDI3_zietH0IvJQH3tArecqfw=',
-      title: 'Refrigerator Repair',
-      text: 'Expert Refrigerator Repair Services.'
+      image:
+        "https://media.istockphoto.com/id/847612846/photo/male-technician-checking-refrigerator.webp?a=1&b=1&s=612x612&w=0&k=20&c=4LvYNl7-vaix9ICCL-rDI3_zietH0IvJQH3tArecqfw=",
+      title: "Refrigerator Repair",
+      text: "Expert Refrigerator Repair Services.",
     },
     {
-      image: 'https://media.istockphoto.com/id/1490247522/photo/repair-and-maintenance-of-boilers-the-hand-of-a-plumber-installs-a-thermostat-in-a-boiler.jpg?s=612x612&w=0&k=20&c=Lm5HdI2sf4mp2NOJq7yxwwmcAIgLG8Q7x26P5b6DjXA=',
-      title: 'Geyser Repair & Installation',
-      text: 'Fast, Reliable, and Affordable repairs.'
+      image:
+        "https://media.istockphoto.com/id/1490247522/photo/repair-and-maintenance-of-boilers-the-hand-of-a-plumber-installs-a-thermostat-in-a-boiler.jpg?s=612x612&w=0&k=20&c=Lm5HdI2sf4mp2NOJq7yxwwmcAIgLG8Q7x26P5b6DjXA=",
+      title: "Geyser Repair & Installation",
+      text: "Fast, Reliable, and Affordable repairs.",
     },
     {
-      image: 'https://5.imimg.com/data5/ZZ/VS/HA/SELLER-2656676/house-wiring.png',
-      title: 'Home Electrical Services',
-      text: 'Safe House  Wiring and House Wiring Repair.'
+      image:
+        "https://5.imimg.com/data5/ZZ/VS/HA/SELLER-2656676/house-wiring.png",
+      title: "Home Electrical Services",
+      text: "Safe House  Wiring and House Wiring Repair.",
     },
-    
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -62,7 +78,7 @@ export default function Hero() {
   }, [slides.length]);
 
   useEffect(() => {
-    const contactSection = document.getElementById('contact');
+    const contactSection = document.getElementById("contact");
     let observer;
     if (contactSection) {
       observer = new window.IntersectionObserver(
@@ -70,7 +86,7 @@ export default function Hero() {
           setShowArrow(!entry.isIntersecting);
           if (entry.isIntersecting) setShowUpArrow(false);
         },
-        { threshold: 0.1 }
+        { threshold: 0.1 },
       );
       observer.observe(contactSection);
     }
@@ -87,7 +103,14 @@ export default function Hero() {
       setShowUpArrow(false);
       upArrowTimeout.current = setTimeout(() => {
         // Only show if not at top and not at contact section
-        if (window.scrollY > 100 && !(contactSection && contactSection.getBoundingClientRect().top < window.innerHeight && contactSection.getBoundingClientRect().bottom > 0)) {
+        if (
+          window.scrollY > 100 &&
+          !(
+            contactSection &&
+            contactSection.getBoundingClientRect().top < window.innerHeight &&
+            contactSection.getBoundingClientRect().bottom > 0
+          )
+        ) {
           setShowUpArrow(true);
         }
       }, 7000);
@@ -100,11 +123,11 @@ export default function Hero() {
         }, 5000);
       }, 100);
     };
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
       if (observer) observer.disconnect();
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
       if (scrollTimeout.current) clearTimeout(scrollTimeout.current);
       if (showTimeout.current) clearTimeout(showTimeout.current);
       if (upArrowTimeout.current) clearTimeout(upArrowTimeout.current);
@@ -118,13 +141,13 @@ export default function Hero() {
         className="hero"
         style={{
           backgroundImage: `url(${slides[currentSlide].image})`,
-          backgroundSize: window.innerWidth <= 768 ? 'contain' : 'cover',
-          backgroundRepeat: 'no-repeat',
-          backgroundPosition: 'center top',
-          transition: 'background-image 0.5s',
-          minHeight: window.innerWidth <= 768 ? '220px' : '350px',
-          width: '100%',
-          marginTop: window.innerWidth <= 768 ? '-24px' : '-40px',
+          backgroundSize: window.innerWidth <= 768 ? "contain" : "cover",
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "center top",
+          transition: "background-image 0.5s",
+          minHeight: window.innerWidth <= 768 ? "220px" : "350px",
+          width: "100%",
+          marginTop: window.innerWidth <= 768 ? "-24px" : "-40px",
         }}
       >
         <div className="hero-content hero-overlay">
@@ -137,22 +160,40 @@ export default function Hero() {
           {/* Move quick response badge even further down for more separation */}
           <div className="hero-badge-wrapper">
             <div className="hero-cta-column">
-              <span className="cta-badge">Quick Response is Our Speciality and Reasonable Price</span>
+              <span className="cta-badge">
+                Quick Response is Our Speciality and Reasonable Price
+              </span>
             </div>
           </div>
           {/* Mobile: show text under badge, Desktop: show below button */}
           {window.innerWidth <= 768 && (
             <div className="hero-mobile-service-text">
-             <sup> We are Service Provider for </sup>
-                    <h5> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh,</h5>
-                 <small>. We have Expert Team of Engineers, they have more than 10 years exprience.</small>
+              <sup> We are Service Provider for </sup>
+              <h5>
+                {" "}
+                Refrigerator Repair Services in Narasaraopet-AndhraPradesh,
+                Washing Machine Repair Services in Narasaraopet-AndhraPradesh,
+                AC (Air Condition) Repair Services in
+                Narasaraopet-AndhraPradesh, House Electrical Repair Services in
+                Narasaraopet-AndhraPradesh, Geyser Repair Services in
+                Narasaraopet-AndhraPradesh,
+              </h5>
+              <small>
+                . We have Expert Team of Engineers, they have more than 10 years
+                exprience.
+              </small>
             </div>
           )}
           <div className="hero-cta-row">
             <button
               className="cta-button modern-input-btn"
               type="button"
-              onClick={() => window.open('https://wa.me/919381283935?text=I%20want%20to%20book%20a%20service', '_blank')}
+              onClick={() =>
+                window.open(
+                  "https://wa.me/919381283935?text=I%20want%20to%20book%20a%20service",
+                  "_blank",
+                )
+              }
             >
               Book a Service
             </button>
@@ -164,20 +205,38 @@ export default function Hero() {
               aria-label="Chat on WhatsApp"
               className="whatsapp-float"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" width="54" height="54" viewBox="0 0 32 32" style={{display: 'block'}}>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="54"
+                height="54"
+                viewBox="0 0 32 32"
+                style={{ display: "block" }}
+              >
                 <g>
-                  <circle cx="16" cy="16" r="16" fill="#25d366"/>
-                  <path d="M16 7.2c-4.8 0-8.8 3.9-8.8 8.8 0 1.6.4 3.1 1.2 4.5L7 25l4.6-1.2c1.3.7 2.7 1.1 4.2 1.1 4.8 0 8.8-3.9 8.8-8.8s-4-8.8-8.8-8.8zm0 15.8c-1.3 0-2.6-.4-3.7-1l-.3-.2-2.7.7.7-2.6-.2-.3c-.7-1.1-1.1-2.4-1.1-3.7 0-3.9 3.2-7.1 7.1-7.1s7.1 3.2 7.1 7.1-3.2 7.1-7.1 7.1zm4-5.3c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.1.1-.5.7-.7.8-.1.1-.2.2-.4.1-.2-.1-.8-.3-1.5-1-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1.1-.2.1-.3 0-.1 0-.2 0-.3 0-.1-.2-.9-.4-1.2-.1-.3-.3-.3-.4-.3h-.3c-.1 0-.3 0-.5.2-.2.2-.7.6-.7 1.5 0 .9.7 1.8.8 1.9.1.1 1.4 2.2 3.5 3 .5.2.9.3 1.2.4.5.1.9.1 1.2.1.4-.1 1.1-.5 1.2-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z" fill="#fff"/>
+                  <circle cx="16" cy="16" r="16" fill="#25d366" />
+                  <path
+                    d="M16 7.2c-4.8 0-8.8 3.9-8.8 8.8 0 1.6.4 3.1 1.2 4.5L7 25l4.6-1.2c1.3.7 2.7 1.1 4.2 1.1 4.8 0 8.8-3.9 8.8-8.8s-4-8.8-8.8-8.8zm0 15.8c-1.3 0-2.6-.4-3.7-1l-.3-.2-2.7.7.7-2.6-.2-.3c-.7-1.1-1.1-2.4-1.1-3.7 0-3.9 3.2-7.1 7.1-7.1s7.1 3.2 7.1 7.1-3.2 7.1-7.1 7.1zm4-5.3c-.2-.1-1.2-.6-1.4-.7-.2-.1-.3-.1-.5.1-.1.1-.5.7-.7.8-.1.1-.2.2-.4.1-.2-.1-.8-.3-1.5-1-.6-.5-1-1.2-1.1-1.4-.1-.2 0-.3.1-.4.1-.1.2-.2.3-.3.1-.1.1-.2.2-.3.1-.1.1-.2.1-.3 0-.1 0-.2 0-.3 0-.1-.2-.9-.4-1.2-.1-.3-.3-.3-.4-.3h-.3c-.1 0-.3 0-.5.2-.2.2-.7.6-.7 1.5 0 .9.7 1.8.8 1.9.1.1 1.4 2.2 3.5 3 .5.2.9.3 1.2.4.5.1.9.1 1.2.1.4-.1 1.1-.5 1.2-1 .2-.5.2-.9.1-1-.1-.1-.2-.1-.4-.2z"
+                    fill="#fff"
+                  />
                 </g>
               </svg>
             </a>
             {window.innerWidth > 768 && (
-              <div style={{marginTop: '18px', textAlign: 'center'}}>
-               
-                 <sup> We are Service Provider for </sup>
-               <h5> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh</h5>
-                 <small>. We have Expert Team of Engineers, in Narasaraopeta they have more than 10 years exprience.</small>
-                
+              <div style={{ marginTop: "18px", textAlign: "center" }}>
+                <sup> We are Service Provider for </sup>
+                <h5>
+                  {" "}
+                  Refrigerator Repair Services in Narasaraopet-AndhraPradesh,
+                  Washing Machine Repair Services in Narasaraopet-AndhraPradesh,
+                  AC (Air Condition) Repair Services in
+                  Narasaraopet-AndhraPradesh, House Electrical Repair Services
+                  in Narasaraopet-AndhraPradesh, Geyser Repair Services in
+                  Narasaraopet-AndhraPradesh
+                </h5>
+                <small>
+                  . We have Expert Team of Engineers, in Narasaraopeta they have
+                  more than 10 years exprience.
+                </small>
               </div>
             )}
           </div>
@@ -189,24 +248,24 @@ export default function Hero() {
         <button
           className="scroll-up-btn"
           title="Scroll to top"
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           style={{
-            position: 'fixed',
+            position: "fixed",
             left: 16,
             bottom: 32,
             zIndex: 9999,
-            background: '#0074D9',
-            borderRadius: '50%',
+            background: "#0074D9",
+            borderRadius: "50%",
             width: 48,
             height: 48,
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 4px 16px #0003',
-            border: 'none',
-            cursor: 'pointer',
-            transition: 'background 0.1s',
-            animation: 'blink-up-arrow 1.2s infinite',
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            boxShadow: "0 4px 16px #0003",
+            border: "none",
+            cursor: "pointer",
+            transition: "background 0.1s",
+            animation: "blink-up-arrow 1.2s infinite",
           }}
         >
           <UpArrowIcon style={{ width: 28, height: 28 }} />
@@ -245,5 +304,5 @@ export default function Hero() {
         }
       `}</style>
     </>
-  )
+  );
 }

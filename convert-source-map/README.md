@@ -1,17 +1,21 @@
 # convert-source-map [![Build Status][ci-image]][ci-url]
 
-Converts a source-map from/to  different formats and allows adding/changing properties.
+Converts a source-map from/to different formats and allows adding/changing properties.
 
 ```js
-var convert = require('convert-source-map');
+var convert = require("convert-source-map");
 
 var json = convert
-  .fromComment('//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVpbGQvZm9vLm1pbi5qcyIsInNvdXJjZXMiOlsic3JjL2Zvby5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIvIn0=')
+  .fromComment(
+    "//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVpbGQvZm9vLm1pbi5qcyIsInNvdXJjZXMiOlsic3JjL2Zvby5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIvIn0=",
+  )
   .toJSON();
 
 var modified = convert
-  .fromComment('//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVpbGQvZm9vLm1pbi5qcyIsInNvdXJjZXMiOlsic3JjL2Zvby5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIvIn0=')
-  .setProperty('sources', [ 'SRC/FOO.JS' ])
+  .fromComment(
+    "//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYnVpbGQvZm9vLm1pbi5qcyIsInNvdXJjZXMiOlsic3JjL2Zvby5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFBQSIsInNvdXJjZVJvb3QiOiIvIn0=",
+  )
+  .setProperty("sources", ["SRC/FOO.JS"])
   .toJSON();
 
 console.log(json);
@@ -77,31 +81,33 @@ If `readMap` returns a `Promise`, `fromMapFileComment` will also return `Promise
 **Synchronous read in Node.js:**
 
 ```js
-var convert = require('convert-source-map');
-var fs = require('fs');
+var convert = require("convert-source-map");
+var fs = require("fs");
 
 function readMap(filename) {
-  return fs.readFileSync(filename, 'utf8');
+  return fs.readFileSync(filename, "utf8");
 }
 
 var json = convert
-  .fromMapFileComment('//# sourceMappingURL=map-file-comment.css.map', readMap)
+  .fromMapFileComment("//# sourceMappingURL=map-file-comment.css.map", readMap)
   .toJSON();
 console.log(json);
 ```
 
-
 **Asynchronous read in Node.js:**
 
 ```js
-var convert = require('convert-source-map');
-var { promises: fs } = require('fs'); // Notice the `promises` import
+var convert = require("convert-source-map");
+var { promises: fs } = require("fs"); // Notice the `promises` import
 
 function readMap(filename) {
-  return fs.readFile(filename, 'utf8');
+  return fs.readFile(filename, "utf8");
 }
 
-var converter = await convert.fromMapFileComment('//# sourceMappingURL=map-file-comment.css.map', readMap)
+var converter = await convert.fromMapFileComment(
+  "//# sourceMappingURL=map-file-comment.css.map",
+  readMap,
+);
 var json = converter.toJSON();
 console.log(json);
 ```
@@ -109,14 +115,17 @@ console.log(json);
 **Asynchronous read in the browser:**
 
 ```js
-var convert = require('convert-source-map');
+var convert = require("convert-source-map");
 
 async function readMap(url) {
   const res = await fetch(url);
   return res.text();
 }
 
-const converter = await convert.fromMapFileComment('//# sourceMappingURL=map-file-comment.css.map', readMap)
+const converter = await convert.fromMapFileComment(
+  "//# sourceMappingURL=map-file-comment.css.map",
+  readMap,
+);
 var json = converter.toJSON();
 console.log(json);
 ```
@@ -186,13 +195,13 @@ Returns `src` with all source map comments pointing to map files removed.
 
 ### commentRegex
 
-Provides __a fresh__ RegExp each time it is accessed. Can be used to find source map comments.
+Provides **a fresh** RegExp each time it is accessed. Can be used to find source map comments.
 
 Breaks down a source map comment into groups: Groups: 1: media type, 2: MIME type, 3: charset, 4: encoding, 5: data.
 
 ### mapFileCommentRegex
 
-Provides __a fresh__ RegExp each time it is accessed. Can be used to find source map comments pointing to map files.
+Provides **a fresh** RegExp each time it is accessed. Can be used to find source map comments pointing to map files.
 
 ### generateMapFileComment(file, [options])
 

@@ -9,12 +9,12 @@ The default Vite plugin for React projects.
 
 ```js
 // vite.config.js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
 
 export default defineConfig({
   plugins: [react()],
-})
+});
 ```
 
 ## Options
@@ -24,16 +24,16 @@ export default defineConfig({
 Includes `.js`, `.jsx`, `.ts` & `.tsx` by default. This option can be used to add fast refresh to `.mdx` files:
 
 ```js
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-import mdx from '@mdx-js/rollup'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import mdx from "@mdx-js/rollup";
 
 export default defineConfig({
   plugins: [
-    { enforce: 'pre', ...mdx() },
+    { enforce: "pre", ...mdx() },
     react({ include: /\.(mdx|js|jsx|ts|tsx)$/ }),
   ],
-})
+});
 ```
 
 > `node_modules` are never processed by this plugin (but esbuild will)
@@ -43,7 +43,7 @@ export default defineConfig({
 Control where the JSX factory is imported from. Default to `'react'`
 
 ```js
-react({ jsxImportSource: '@emotion/react' })
+react({ jsxImportSource: "@emotion/react" });
 ```
 
 ### jsxRuntime
@@ -51,7 +51,7 @@ react({ jsxImportSource: '@emotion/react' })
 By default, the plugin uses the [automatic JSX runtime](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html). However, if you encounter any issues, you may opt out using the `jsxRuntime` option.
 
 ```js
-react({ jsxRuntime: 'classic' })
+react({ jsxRuntime: "classic" });
 ```
 
 ### babel
@@ -82,10 +82,10 @@ If you are using ES syntax that are still in proposal status (e.g. class propert
 react({
   babel: {
     parserOpts: {
-      plugins: ['decorators-legacy'],
+      plugins: ["decorators-legacy"],
     },
   },
-})
+});
 ```
 
 This option does not enable _code transformation_. That is handled by esbuild.
@@ -99,7 +99,7 @@ Here's the [complete list of Babel parser plugins](https://babeljs.io/docs/en/ba
 The `reactRefreshHost` option is only necessary in a module federation context. It enables HMR to work between a remote & host application. In your remote Vite config, you would add your host origin:
 
 ```js
-react({ reactRefreshHost: 'http://localhost:3000' })
+react({ reactRefreshHost: "http://localhost:3000" });
 ```
 
 Under the hood, this simply updates the React Fash Refresh runtime URL from `/@react-refresh` to `http://localhost:3000/@react-refresh` to ensure there is only one Refresh runtime across the whole application. Note that if you define `base` option in the host application, you need to include it in the option, like: `http://localhost:3000/{base}`.
@@ -109,18 +109,18 @@ Under the hood, this simply updates the React Fash Refresh runtime URL from `/@r
 In [middleware mode](https://vite.dev/config/server-options.html#server-middlewaremode), you should make sure your entry `index.html` file is transformed by Vite. Here's an example for an Express server:
 
 ```js
-app.get('/', async (req, res, next) => {
+app.get("/", async (req, res, next) => {
   try {
-    let html = fs.readFileSync(path.resolve(root, 'index.html'), 'utf-8')
+    let html = fs.readFileSync(path.resolve(root, "index.html"), "utf-8");
 
     // Transform HTML using Vite plugins.
-    html = await viteServer.transformIndexHtml(req.url, html)
+    html = await viteServer.transformIndexHtml(req.url, html);
 
-    res.send(html)
+    res.send(html);
   } catch (e) {
-    return next(e)
+    return next(e);
   }
-})
+});
 ```
 
 Otherwise, you'll probably get this error:

@@ -1,6 +1,17 @@
 //#region src/composable-filters.d.ts
 type StringOrRegExp = string | RegExp;
-type PluginModuleType = "js" | "jsx" | "ts" | "tsx" | "json" | "text" | "base64" | "dataurl" | "binary" | "empty" | (string & {});
+type PluginModuleType =
+  | "js"
+  | "jsx"
+  | "ts"
+  | "tsx"
+  | "json"
+  | "text"
+  | "base64"
+  | "dataurl"
+  | "binary"
+  | "empty"
+  | (string & {});
 type FilterExpressionKind = FilterExpression["kind"];
 type FilterExpression = And | Or | Not | Id | ModuleType | Code | Query;
 type TopLevelFilterExpression = Include | Exclude;
@@ -67,91 +78,135 @@ declare function query(key: string, pattern: StringOrRegExp | boolean): Query;
 declare function include(expr: FilterExpression): Include;
 declare function exclude(expr: FilterExpression): Exclude;
 /**
-* convert a queryObject to FilterExpression like
-* ```js
-*   and(query(k1, v1), query(k2, v2))
-* ```
-* @param queryFilterObject The query filter object needs to be matched.
-* @returns a `And` FilterExpression
-*/
+ * convert a queryObject to FilterExpression like
+ * ```js
+ *   and(query(k1, v1), query(k2, v2))
+ * ```
+ * @param queryFilterObject The query filter object needs to be matched.
+ * @returns a `And` FilterExpression
+ */
 declare function queries(queryFilter: QueryFilterObject): And;
-declare function interpreter(exprs: TopLevelFilterExpression | TopLevelFilterExpression[], code?: string, id?: string, moduleType?: PluginModuleType): boolean;
+declare function interpreter(
+  exprs: TopLevelFilterExpression | TopLevelFilterExpression[],
+  code?: string,
+  id?: string,
+  moduleType?: PluginModuleType,
+): boolean;
 interface InterpreterCtx {
   urlSearchParamsCache?: URLSearchParams;
 }
-declare function interpreterImpl(expr: TopLevelFilterExpression[], code?: string, id?: string, moduleType?: PluginModuleType, ctx?: InterpreterCtx): boolean;
-declare function exprInterpreter(expr: FilterExpression, code?: string, id?: string, moduleType?: PluginModuleType, ctx?: InterpreterCtx): boolean;
+declare function interpreterImpl(
+  expr: TopLevelFilterExpression[],
+  code?: string,
+  id?: string,
+  moduleType?: PluginModuleType,
+  ctx?: InterpreterCtx,
+): boolean;
+declare function exprInterpreter(
+  expr: FilterExpression,
+  code?: string,
+  id?: string,
+  moduleType?: PluginModuleType,
+  ctx?: InterpreterCtx,
+): boolean;
 //#endregion
 //#region src/simple-filters.d.ts
 /**
-* Constructs a RegExp that matches the exact string specified.
-*
-* This is useful for plugin hook filters.
-*
-* @param str the string to match.
-* @param flags flags for the RegExp.
-*
-* @example
-* ```ts
-* import { exactRegex } from '@rolldown/pluginutils';
-* const plugin = {
-*   name: 'plugin',
-*   resolveId: {
-*     filter: { id: exactRegex('foo') },
-*     handler(id) {} // will only be called for `foo`
-*   }
-* }
-* ```
-*/
+ * Constructs a RegExp that matches the exact string specified.
+ *
+ * This is useful for plugin hook filters.
+ *
+ * @param str the string to match.
+ * @param flags flags for the RegExp.
+ *
+ * @example
+ * ```ts
+ * import { exactRegex } from '@rolldown/pluginutils';
+ * const plugin = {
+ *   name: 'plugin',
+ *   resolveId: {
+ *     filter: { id: exactRegex('foo') },
+ *     handler(id) {} // will only be called for `foo`
+ *   }
+ * }
+ * ```
+ */
 declare function exactRegex(str: string, flags?: string): RegExp;
 /**
-* Constructs a RegExp that matches a value that has the specified prefix.
-*
-* This is useful for plugin hook filters.
-*
-* @param str the string to match.
-* @param flags flags for the RegExp.
-*
-* @example
-* ```ts
-* import { prefixRegex } from '@rolldown/pluginutils';
-* const plugin = {
-*   name: 'plugin',
-*   resolveId: {
-*     filter: { id: prefixRegex('foo') },
-*     handler(id) {} // will only be called for IDs starting with `foo`
-*   }
-* }
-* ```
-*/
+ * Constructs a RegExp that matches a value that has the specified prefix.
+ *
+ * This is useful for plugin hook filters.
+ *
+ * @param str the string to match.
+ * @param flags flags for the RegExp.
+ *
+ * @example
+ * ```ts
+ * import { prefixRegex } from '@rolldown/pluginutils';
+ * const plugin = {
+ *   name: 'plugin',
+ *   resolveId: {
+ *     filter: { id: prefixRegex('foo') },
+ *     handler(id) {} // will only be called for IDs starting with `foo`
+ *   }
+ * }
+ * ```
+ */
 declare function prefixRegex(str: string, flags?: string): RegExp;
 type WidenString<T> = T extends string ? string : T;
 /**
-* Converts a id filter to match with an id with a query.
-*
-* @param input the id filters to convert.
-*
-* @example
-* ```ts
-* import { makeIdFiltersToMatchWithQuery } from '@rolldown/pluginutils';
-* const plugin = {
-*   name: 'plugin',
-*   transform: {
-*     filter: { id: makeIdFiltersToMatchWithQuery(['**' + '/*.js', /\.ts$/]) },
-*     // The handler will be called for IDs like:
-*     // - foo.js
-*     // - foo.js?foo
-*     // - foo.txt?foo.js
-*     // - foo.ts
-*     // - foo.ts?foo
-*     // - foo.txt?foo.ts
-*     handler(code, id) {}
-*   }
-* }
-* ```
-*/
-declare function makeIdFiltersToMatchWithQuery<T extends string | RegExp>(input: T): WidenString<T>;
-declare function makeIdFiltersToMatchWithQuery<T extends string | RegExp>(input: readonly T[]): WidenString<T>[];
-declare function makeIdFiltersToMatchWithQuery(input: string | RegExp | readonly (string | RegExp)[]): string | RegExp | (string | RegExp)[];
+ * Converts a id filter to match with an id with a query.
+ *
+ * @param input the id filters to convert.
+ *
+ * @example
+ * ```ts
+ * import { makeIdFiltersToMatchWithQuery } from '@rolldown/pluginutils';
+ * const plugin = {
+ *   name: 'plugin',
+ *   transform: {
+ *     filter: { id: makeIdFiltersToMatchWithQuery(['**' + '/*.js', /\.ts$/]) },
+ *     // The handler will be called for IDs like:
+ *     // - foo.js
+ *     // - foo.js?foo
+ *     // - foo.txt?foo.js
+ *     // - foo.ts
+ *     // - foo.ts?foo
+ *     // - foo.txt?foo.ts
+ *     handler(code, id) {}
+ *   }
+ * }
+ * ```
+ */
+declare function makeIdFiltersToMatchWithQuery<T extends string | RegExp>(
+  input: T,
+): WidenString<T>;
+declare function makeIdFiltersToMatchWithQuery<T extends string | RegExp>(
+  input: readonly T[],
+): WidenString<T>[];
+declare function makeIdFiltersToMatchWithQuery(
+  input: string | RegExp | readonly (string | RegExp)[],
+): string | RegExp | (string | RegExp)[];
 //#endregion
-export { FilterExpression, FilterExpressionKind, QueryFilterObject, TopLevelFilterExpression, and, code, exactRegex, exclude, exprInterpreter, id, include, interpreter, interpreterImpl, makeIdFiltersToMatchWithQuery, moduleType, not, or, prefixRegex, queries, query };
+export {
+  FilterExpression,
+  FilterExpressionKind,
+  QueryFilterObject,
+  TopLevelFilterExpression,
+  and,
+  code,
+  exactRegex,
+  exclude,
+  exprInterpreter,
+  id,
+  include,
+  interpreter,
+  interpreterImpl,
+  makeIdFiltersToMatchWithQuery,
+  moduleType,
+  not,
+  or,
+  prefixRegex,
+  queries,
+  query,
+};

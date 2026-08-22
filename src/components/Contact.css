@@ -23,9 +23,9 @@
   font-weight: 600;
   font-size: 1.1rem;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(30,64,175,0.10);
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.1);
   letter-spacing: 0.3px;
-  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  font-family: "Poppins", "Inter", Arial, sans-serif;
   transition: background 0.2s;
 }
 
@@ -45,19 +45,31 @@
   font-weight: 600;
   font-size: 1rem;
   text-decoration: none;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
   letter-spacing: 0.3px;
-  font-family: 'Poppins', 'Inter', Arial, sans-serif;
+  font-family: "Poppins", "Inter", Arial, sans-serif;
   transition: background 0.18s;
   border: none;
   cursor: pointer;
 }
-.info-call-button { background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%); }
-.info-call-button:active { background: #1e40af; }
-.info-whatsapp-button { background: linear-gradient(90deg, #25D366 0%, #13bfa6 100%); }
+.info-call-button {
+  background: linear-gradient(90deg, #1e40af 0%, #2563eb 100%);
+}
+.info-call-button:active {
+  background: #1e40af;
+}
+.info-whatsapp-button {
+  background: linear-gradient(90deg, #25d366 0%, #13bfa6 100%);
+}
 
 /* Map iframe helper class to match previous inline styles */
-.map-iframe { border: 0; border-radius: 12px; max-width: 600px; width: 100%; min-height: 220px; }
+.map-iframe {
+  border: 0;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 100%;
+  min-height: 220px;
+}
 
 @media (max-width: 768px) {
   .map-call-wrapper iframe {
@@ -176,7 +188,7 @@
 
 .star.filled {
   color: #ffb400; /* gold */
-  text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
 }
 
 .star:hover,

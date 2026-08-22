@@ -1,14 +1,13 @@
-
-import { useState } from 'react';
-import './Contact.css';
+import { useState } from "react";
+import "./Contact.css";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    service: '',
-    message: ''
+    name: "",
+    email: "",
+    phone: "",
+    service: "",
+    message: "",
   });
 
   const handleChange = (e) => {
@@ -22,26 +21,28 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Build WhatsApp message
-    const phoneNumber = '919390609601';
+    const phoneNumber = "919390609601";
     const messageLines = [
       `Name: ${formData.name}`,
       `Email: ${formData.email}`,
       `Phone: ${formData.phone}`,
       `Service: ${formData.service}`,
-      formData.message ? `Message: ${formData.message}` : '',
+      formData.message ? `Message: ${formData.message}` : "",
     ].filter(Boolean);
-    const message = encodeURIComponent(messageLines.join('\n'));
+    const message = encodeURIComponent(messageLines.join("\n"));
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
-    window.open(whatsappUrl, '_blank');
-    alert('Your request will be sent via WhatsApp.');
-    setFormData({ name: '', email: '', phone: '', service: '', message: '' });
+    window.open(whatsappUrl, "_blank");
+    alert("Your request will be sent via WhatsApp.");
+    setFormData({ name: "", email: "", phone: "", service: "", message: "" });
   };
 
   return (
     <section id="contact" className="contact">
       <div className="container">
         <h2>Contact Us</h2>
-        <p className="section-subtitle">Get in touch for a free quote or emergency service</p>
+        <p className="section-subtitle">
+          Get in touch for a free quote or emergency service
+        </p>
         <div className="contact-wrapper">
           <div className="contact-info">
             <div className="info-item">
@@ -50,12 +51,29 @@ export default function Contact() {
             </div>
             <div className="info-item">
               <h3>📞 Call Us</h3>
-              <button type="button" className="info-call-button" onClick={() => window.open('tel:9381283935')}>Call +91 9381283935</button>
+              <button
+                type="button"
+                className="info-call-button"
+                onClick={() => window.open("tel:9381283935")}
+              >
+                Call +91 9381283935
+              </button>
               <p>Available 24/7 for emergencies</p>
             </div>
             <div className="info-item">
               <h3>💬 WhatsApp</h3>
-              <button type="button" className="info-whatsapp-button" onClick={() => window.open('https://wa.me/919381283935?text=Hello%2C%20I%20want%20to%20book%20a%20service', '_blank')}>Text Me on WhatsApp</button>
+              <button
+                type="button"
+                className="info-whatsapp-button"
+                onClick={() =>
+                  window.open(
+                    "https://wa.me/919381283935?text=Hello%2C%20I%20want%20to%20book%20a%20service",
+                    "_blank",
+                  )
+                }
+              >
+                Text Me on WhatsApp
+              </button>
               <p>Quick response guaranteed</p>
             </div>
             <div className="info-item">
@@ -68,16 +86,18 @@ export default function Contact() {
           {/* Google Maps Embed */}
           <div className="map-call-wrapper">
             <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.7455991202883!2d80.0362166!3d16.2335133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a81139be02dd9%3A0xb0d8a129b97d8797!2sNarasaraopet%20Home%20Appliances%20Repair%20at%20doorstep!5e0!3m2!1sen!2sin!4v1774113200770!5m2!1sen!2sin"
-                width="100%"
-                height="450"
-                className="map-iframe"
-                allowFullScreen=""
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                title="Narasaraopet Home Appliances repair at Door Step Map"
-              ></iframe>
-            <a href="tel:9381283935" className="call-now-btn">Call Now</a>
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.7455991202883!2d80.0362166!3d16.2335133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a81139be02dd9%3A0xb0d8a129b97d8797!2sNarasaraopet%20Home%20Appliances%20Repair%20at%20doorstep!5e0!3m2!1sen!2sin!4v1774113200770!5m2!1sen!2sin"
+              width="100%"
+              height="450"
+              className="map-iframe"
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Narasaraopet Home Appliances repair at Door Step Map"
+            ></iframe>
+            <a href="tel:9381283935" className="call-now-btn">
+              Call Now
+            </a>
           </div>
 
           <form className="contact-form" onSubmit={handleSubmit}>
@@ -129,10 +149,12 @@ export default function Contact() {
               ></textarea>
             </div>
 
-            <button type="submit" className="submit-button">Send Request</button>
+            <button type="submit" className="submit-button">
+              Send Request
+            </button>
           </form>
         </div>
       </div>
     </section>
-  )
+  );
 }
