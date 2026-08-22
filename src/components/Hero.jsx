@@ -22,7 +22,7 @@ export default function Hero() {
   const slides = [
     {
       image: 'https://tse3.mm.bing.net/th/id/OIP.O5VQWO_WKedPH2En-GF93QHaE7?w=650&h=433&rs=1&pid=ImgDetMain&o=7&rm=3',
-      title: 'Welcome to Narasaraopet Home Appliances reapir at Door Step',
+      title: 'Welcome to Narasaraopet Home Appliances repair at Door Step',
       text:  'Your trusted home appliance repair service in Narasaraopeta.'
     },
     {

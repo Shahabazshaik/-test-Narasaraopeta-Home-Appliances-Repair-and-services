@@ -78,6 +78,9 @@
 .logo {
   display: flex;
   flex-direction: column;
+  flex: 1 1 auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo h1 {
