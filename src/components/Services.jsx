@@ -44,17 +44,10 @@ export default function Services() {
       features: ['Heating Issues', 'Thermostat Fix', 'Installation'],
       bgImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQfW_uFZROU96-7BV5qMppxIeuOTN8Mt2xtKebBPfL1oQ&s'
     },
-    {
-      id: 6,
-      title: 'Plumbing, water line Repair',
-      description: 'Leak repairs, pipe fitting, tap replacement, and bathroom/kitchen plumbing solutions.',
-      // icon: '🔧',
-      features: ['Leak Repair', 'Pipe Fitting', 'Tap Replacement'],
-      bgImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIEAGtjFJYdiTwykU-3T8YiIQg971fGZYOlQ&s'
-    },
+    
     {
       id: 7,
-      title: 'Other Home Appliances Repair',
+      title: 'Narasaraopet Home Appliances reapir at Door Step',
       description: 'Repair and maintenance for other home appliances like TV, fans, submersible motors, and more.',
       // icon: '🛠️',
       features: ['TV Repair', 'Submersible Motor', 'General Appliances'],

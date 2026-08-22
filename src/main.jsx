@@ -40,7 +40,7 @@ const geyserService = {
 };
 const otherHomeAppliancesService = {
   id: 7,
-  title: 'Other Home Appliances Repair in Narasaraopet',
+  title: 'Narasaraopet Home Appliances reapir at Door Step',
   description: 'Comprehensive repair and service for all home appliances. Genuine parts and certified technicians.',
   bgImage: 'https://www.lg.com/in/images/washing-machines/md07518199/gallery/medium01.jpg',
 };

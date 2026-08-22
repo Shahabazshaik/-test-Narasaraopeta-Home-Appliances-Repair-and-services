@@ -1,6 +1,7 @@
 
 import './Hero.css'
 import { useEffect, useState, useRef } from 'react';
+import MobileCTA from './MobileCTA'
 
 function UpArrowIcon({ style }) {
   return (
@@ -21,7 +22,7 @@ export default function Hero() {
   const slides = [
     {
       image: 'https://tse3.mm.bing.net/th/id/OIP.O5VQWO_WKedPH2En-GF93QHaE7?w=650&h=433&rs=1&pid=ImgDetMain&o=7&rm=3',
-      title: 'Welcome to  Home Appliances Repair',
+      title: 'Welcome to Narasaraopet Home Appliances reapir at Door Step',
       text:  'Your trusted home appliance repair service in Narasaraopeta.'
     },
     {
@@ -49,11 +50,7 @@ export default function Hero() {
       title: 'Home Electrical Services',
       text: 'Safe House  Wiring and House Wiring Repair.'
     },
-    {
-      image: 'https://media.istockphoto.com/id/482988553/photo/repairing-sink.jpg?s=612x612&w=0&k=20&c=FXvXGE08ZtyhhsnLALnAMFg70hOt872dDjtAG57QMfI=',
-      title: 'plumbing Services',
-      text: 'Home plumbing works & Repair.'
-    }
+    
   ];
   const [currentSlide, setCurrentSlide] = useState(0);
 
@@ -168,7 +165,7 @@ export default function Hero() {
           {window.innerWidth <= 768 && (
             <div className="hero-mobile-service-text">
              <sup> We are Service Provider for </sup>
-                 <h5> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, plumbing work & Repair Services in Narasaraopet-AndhraPradesh, plumber  in Narasaraopet-AndhraPradesh, current Repair Services in Narasaraopet-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh,</h5>
+                    <h5> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh,</h5>
                  <small>. We have Expert Team of Engineers, they have more than 10 years exprience.</small>
             </div>
           )}
@@ -254,7 +251,7 @@ export default function Hero() {
               <div style={{marginTop: '18px', textAlign: 'center'}}>
                
                  <sup> We are Service Provider for </sup>
-               <h5> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, plumbing work & Repair Services in Narasaraopet-AndhraPradesh, plumber  in Narasaraopeta-AndhraPradesh, current Repair Services in Narasaraopeta-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh</h5>
+               <h5> Refrigerator Repair Services in Narasaraopet-AndhraPradesh, Washing Machine Repair Services in Narasaraopet-AndhraPradesh, AC (Air Condition) Repair Services in Narasaraopet-AndhraPradesh, House Electrical Repair Services in Narasaraopet-AndhraPradesh, Geyser Repair Services in Narasaraopet-AndhraPradesh</h5>
                  <small>. We have Expert Team of Engineers, in Narasaraopeta they have more than 10 years exprience.</small>
                 
               </div>
@@ -262,43 +259,7 @@ export default function Hero() {
           </div>
         </div>
       </section>
-      {/* Floating Call Button for Mobile */}
-      {showArrow && !isScrolling && !waitingToShow && (
-        <a
-          href="tel:9381283935"
-          className="floating-call-btn"
-          title="Call Now"
-          style={{
-            position: 'fixed',
-            right: 16,
-            bottom: 24,
-            zIndex: 9999,
-            background: '#25d366',
-            borderRadius: '35px',
-            width: 220,
-            height: 48,
-            display: 'flex',
-            flexDirection: 'row',
-            alignItems: 'center',
-            justifyContent: 'center',
-            boxShadow: '0 4px 16px #0003',
-            animation: 'bounce-call 1.1s infinite',
-            color: '#fff',
-            border: 'none',
-            cursor: 'pointer',
-            fontSize: 3,
-            textDecoration: 'none',
-            transition: 'background 0.1s',
-          }}
-        >
-          {/* WhatsApp SVG icon */}
-          <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 32 32" style={{marginRight: 10, minWidth: 28, minHeight: 28, verticalAlign: 'middle'}}>
-            <circle cx="16" cy="16" r="16" fill="#25d366"/>
-            <path d="M24.5 19.7c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.5-.2-.7.2-.2.4-.8 1.2-1 1.4-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5-.2 0-.4 0-.6 0-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7 0 1.6 1.2 3.1 1.4 3.3.2.2 2.3 3.6 5.7 4.9.8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.4-.2-.8-.4z" fill="#fff"/>
-          </svg>
-          <span style={{ fontSize: 18, fontWeight: 500, fontFamily: 'Poppins, Inter, Arial, sans-serif', letterSpacing: '0.5px', whiteSpace: 'nowrap' }}>Call 9381283935</span>
-        </a>
-      )}
+      <MobileCTA />
       {/* Up Arrow Scroll-to-Top Button */}
       {showUpArrow && (
         <button

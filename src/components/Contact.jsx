@@ -113,7 +113,7 @@ export default function Contact() {
               allowFullScreen=""
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Narasaraopet Home Appliances Repair at doorstep Map"
+              title="Narasaraopet Home Appliances reapir at Door Step Map"
             ></iframe>
             <a href="tel:9381283935" className="call-now-btn">Call Now</a>
           </div>
@@ -149,7 +149,6 @@ export default function Contact() {
                 <option value="ac">Air Conditioner Service</option>
                 <option value="electrical">Electrical Work</option>
                 <option value="geyser">Geyser & Water Heater</option>
-                <option value="plumbing">Plumbing & Drainage</option>
                 <option value="other">Other</option>
               </select>
             </div>
