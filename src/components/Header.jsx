@@ -143,7 +143,11 @@ export default function Header() {
       )}
       <div className="container">
         <div className="logo">
-          <h1>Narasaraopet Home Appliances repair at Door Step</h1>
+          <h1>
+            <span className="heading-line1">Narasaraopet Home Appliances</span>
+            <br />
+            <span className="heading-line2">repair at Door Step</span>
+          </h1>
         </div>
         <nav className="nav">
           {/* <a href="#home">Home</a>

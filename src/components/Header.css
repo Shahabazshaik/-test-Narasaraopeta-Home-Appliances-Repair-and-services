@@ -97,16 +97,24 @@
 }
 
 .logo h1 {
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   margin: 0;
   font-weight: 700;
+  line-height: 1.05;
+  text-align: center;
 }
 
-/* Force single-line heading and gracefully truncate if too long */
-.logo h1 {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.heading-line1 {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 800;
+}
+
+.heading-line2 {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  opacity: 0.95;
 }
 
 .logo p {
@@ -166,7 +174,7 @@
     box-shadow: 0 2px 8px #0002;
   }
   .logo h1 {
-    font-size: 1.05rem;
+    font-size: 1.35rem;
     text-align: center;
     padding: 0 2px;
   }
@@ -224,11 +232,21 @@
   }
 
   .logo h1 {
-    font-size: 1.1rem;
+    font-size: 1.35rem;
   }
   .logo {
     padding-top: 8px;
   }
+
+/* Adjust line sizes on small screens */
+@media (max-width: 480px) {
+  .heading-line1 {
+    font-size: 1.3rem;
+  }
+  .heading-line2 {
+    font-size: 1.05rem;
+  }
+}
 }
 
 /* New classes moved from inline styles in Header.jsx */
