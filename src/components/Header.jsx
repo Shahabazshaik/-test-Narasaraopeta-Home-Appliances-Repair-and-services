@@ -50,40 +50,40 @@ export default function Header() {
       </button>
       {/* Small horizontal menu under hamburger and heading */}
       <div className="header-mini-menu">
-        <Link to="/ac-repair-narasaraopet" style={{ color: '#e8ecef', textDecoration: 'none' }}>AC Repair</Link>
-        <Link to="/washing-machine-repair-narasaraopet" style={{ color: '#e5ebf0', textDecoration: 'none' }}>Washing Machine</Link>
-        <Link to="/fridge-repair-narasaraopet" style={{ color: '#eef2f6', textDecoration: 'none' }}>Fridge</Link>
-        <Link to="/geyser-repair-narasaraopet" style={{ color: '#ebeef1', textDecoration: 'none' }}>Geyser</Link>
-        <Link to="/electrical-services-narasaraopet" style={{ color: '#e8ebee', textDecoration: 'none' }}>Electrical</Link>
-        <Link to="/other-home-appliances-repair" style={{ color: '#f1f5f9', textDecoration: 'none' }}>Other</Link>
+        <Link to="/ac-repair-narasaraopet" className="mini-menu-link">AC Repair</Link>
+        <Link to="/washing-machine-repair-narasaraopet" className="mini-menu-link">Washing Machine</Link>
+        <Link to="/fridge-repair-narasaraopet" className="mini-menu-link">Fridge</Link>
+        <Link to="/geyser-repair-narasaraopet" className="mini-menu-link">Geyser</Link>
+        <Link to="/electrical-services-narasaraopet" className="mini-menu-link">Electrical</Link>
+        <Link to="/other-home-appliances-repair" className="mini-menu-link">Other</Link>
       </div>
       {showServices && (
         <div
           ref={dropdownRef}
           className="services-dropdown"
         >
-          <Link to="/ac-repair-narasaraopet" className="dropdown-link" style={{ display: 'block', padding: '0.75rem 1.5rem', color: '#005baa', textDecoration: 'none' }} onClick={() => setShowServices(false)}>
+          <Link to="/ac-repair-narasaraopet" className="dropdown-link" onClick={() => setShowServices(false)}>
             AC Repair
           </Link>
-          <Link to="/washing-machine-repair-narasaraopet" className="dropdown-link" style={{ display: 'block', padding: '0.75rem 1.5rem', color: '#005baa', textDecoration: 'none' }} onClick={() => setShowServices(false)}>
+          <Link to="/washing-machine-repair-narasaraopet" className="dropdown-link" onClick={() => setShowServices(false)}>
             Washing Machine Repair
           </Link>
-          <Link to="/fridge-repair-narasaraopet" className="dropdown-link" style={{ display: 'block', padding: '0.75rem 1.5rem', color: '#005baa', textDecoration: 'none' }} onClick={() => setShowServices(false)}>
+          <Link to="/fridge-repair-narasaraopet" className="dropdown-link" onClick={() => setShowServices(false)}>
             Fridge Repair
           </Link>
-          <Link to="/geyser-repair-narasaraopet" className="dropdown-link" style={{ display: 'block', padding: '0.75rem 1.5rem', color: '#005baa', textDecoration: 'none' }} onClick={() => setShowServices(false)}>
+          <Link to="/geyser-repair-narasaraopet" className="dropdown-link" onClick={() => setShowServices(false)}>
             Geyser Repair
           </Link>
-          <Link to="/electrical-services-narasaraopet" className="dropdown-link" style={{ display: 'block', padding: '0.75rem 1.5rem', color: '#005baa', textDecoration: 'none' }} onClick={() => setShowServices(false)}>
+          <Link to="/electrical-services-narasaraopet" className="dropdown-link" onClick={() => setShowServices(false)}>
             Electrical Services
           </Link>
-          <Link to="/other-home-appliances-repair" className="dropdown-link" style={{ display: 'block', padding: '0.75rem 1.5rem', color: '#005baa', textDecoration: 'none' }} onClick={() => setShowServices(false)}>
+          <Link to="/other-home-appliances-repair" className="dropdown-link" onClick={() => setShowServices(false)}>
             Other Home Appliances
           </Link>
-          <a href="#contact" className="dropdown-link" style={{ display: 'block', padding: '0.75rem 1.5rem', color: '#005baa', textDecoration: 'none' }} onClick={() => setShowServices(false)}>
+          <a href="#contact" className="dropdown-link" onClick={() => setShowServices(false)}>
             Contact Us
           </a>
-          <a href="#reviews" className="dropdown-link" style={{ display: 'block', padding: '0.75rem 1.5rem', color: '#005baa', textDecoration: 'none' }} onClick={() => setShowServices(false)}>
+          <a href="#reviews" className="dropdown-link" onClick={() => setShowServices(false)}>
             Reviews
           </a>
         </div>

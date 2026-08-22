@@ -128,35 +128,14 @@ export default function Hero() {
         }}
       >
         <div className="hero-content hero-overlay">
-          <h2 style={{
-            color: '#fff',
-            fontFamily: 'Poppins, Inter, Arial, sans-serif',
-            fontWeight: 600,
-            letterSpacing: '0.5px',
-            textShadow: '0 4px 16px #0006',
-            fontSize: '2.1rem',
-            marginBottom: 8,
-            lineHeight: 1.2
-          }}>
-            {slides[currentSlide].title}
-          </h2>
-          <p style={{
-            color: '#e3e6ea',
-            fontFamily: 'Poppins, Inter, Arial, sans-serif',
-            fontWeight: 400,
-            fontSize: '1.15rem',
-            textShadow: '0 1px 6px #0005',
-            marginBottom: 0,
-            lineHeight: 1.5
-          }}>
-            {slides[currentSlide].text}
-          </p>
+          <h2 className="hero-title">{slides[currentSlide].title}</h2>
+          <p className="hero-text">{slides[currentSlide].text}</p>
           {/* ...existing code... */}
           {/* ...existing code... */}
           {/* ...existing code... */}
           {/* Down arrow removed as requested */}
           {/* Move quick response badge even further down for more separation */}
-          <div style={{ marginTop: 64, marginBottom: 24 }}>
+          <div className="hero-badge-wrapper">
             <div className="hero-cta-column">
               <span className="cta-badge">Quick Response is Our Speciality and Reasonable Price</span>
             </div>

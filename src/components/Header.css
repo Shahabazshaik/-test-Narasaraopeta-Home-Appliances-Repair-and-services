@@ -244,6 +244,15 @@
   pointer-events: auto;
 }
 
+.mini-menu-link { color: #e8ecef; text-decoration: none; }
+.mini-menu-link:nth-child(2) { color: #e5ebf0; }
+.mini-menu-link:nth-child(3) { color: #eef2f6; }
+.mini-menu-link:nth-child(4) { color: #ebeef1; }
+.mini-menu-link:nth-child(5) { color: #e8ebee; }
+.mini-menu-link:nth-child(6) { color: #f1f5f9; }
+
+.dropdown-link { display: block; padding: 0.75rem 1.5rem; color: #005baa; text-decoration: none; }
+
 .services-dropdown {
   position: absolute;
   top: 60px;

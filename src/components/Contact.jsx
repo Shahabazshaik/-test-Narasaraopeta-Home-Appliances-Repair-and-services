@@ -50,50 +50,12 @@ export default function Contact() {
             </div>
             <div className="info-item">
               <h3>📞 Call Us</h3>
-              <button
-                type="button"
-                style={{
-                  background: 'linear-gradient(90deg, #1e40af 0%, #2563eb 100%)',
-                  color: '#fff',
-                  fontWeight: 500,
-                  fontFamily: 'Poppins, Inter, Arial, sans-serif',
-                  border: 'none',
-                  borderRadius: 8,
-                  padding: '8px 18px',
-                  fontSize: '1rem',
-                  cursor: 'pointer',
-                  marginBottom: 8,
-                  boxShadow: '0 2px 8px rgba(30,64,175,0.10)',
-                  letterSpacing: '0.3px'
-                }}
-                onClick={() => window.open('tel:9381283935')}
-              >
-                Call +91 9381283935
-              </button>
+              <button type="button" className="info-call-button" onClick={() => window.open('tel:9381283935')}>Call +91 9381283935</button>
               <p>Available 24/7 for emergencies</p>
             </div>
             <div className="info-item">
               <h3>💬 WhatsApp</h3>
-              <button
-                type="button"
-                style={{
-                  background: 'linear-gradient(90deg, #25D366 0%, #13bfa6 100%)',
-                  color: '#fff',
-                  fontWeight: 500,
-                  fontFamily: 'Poppins, Inter, Arial, sans-serif',
-                  border: 'none',
-                  borderRadius: 8,
-                  padding: '8px 18px',
-                  fontSize: '1rem',
-                  cursor: 'pointer',
-                  marginBottom: 8,
-                  boxShadow: '0 2px 8px rgba(37,211,102,0.10)',
-                  letterSpacing: '0.3px'
-                }}
-                onClick={() => window.open('https://wa.me/919381283935?text=Hello%2C%20I%20want%20to%20book%20a%20service', '_blank')}
-              >
-                Text Me on WhatsApp
-              </button>
+              <button type="button" className="info-whatsapp-button" onClick={() => window.open('https://wa.me/919381283935?text=Hello%2C%20I%20want%20to%20book%20a%20service', '_blank')}>Text Me on WhatsApp</button>
               <p>Quick response guaranteed</p>
             </div>
             <div className="info-item">
@@ -106,15 +68,15 @@ export default function Contact() {
           {/* Google Maps Embed */}
           <div className="map-call-wrapper">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.7455991202883!2d80.0362166!3d16.2335133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a81139be02dd9%3A0xb0d8a129b97d8797!2sNarasaraopet%20Home%20Appliances%20Repair%20at%20doorstep!5e0!3m2!1sen!2sin!4v1774113200770!5m2!1sen!2sin"
-              width="100%"
-              height="450"
-              style={{ border: 0, borderRadius: 12, maxWidth: 600, width: '100%', minHeight: 220 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Narasaraopet Home Appliances repair at Door Step Map"
-            ></iframe>
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3830.7455991202883!2d80.0362166!3d16.2335133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4a81139be02dd9%3A0xb0d8a129b97d8797!2sNarasaraopet%20Home%20Appliances%20Repair%20at%20doorstep!5e0!3m2!1sen!2sin!4v1774113200770!5m2!1sen!2sin"
+                width="100%"
+                height="450"
+                className="map-iframe"
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Narasaraopet Home Appliances repair at Door Step Map"
+              ></iframe>
             <a href="tel:9381283935" className="call-now-btn">Call Now</a>
           </div>
 
