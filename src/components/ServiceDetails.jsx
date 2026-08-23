@@ -11,8 +11,7 @@ export default function ServiceDetails({ service }) {
         "We provide expert diagnosis and repair for all major brands and models. Whether it’s drum issues, water leakage, or electrical faults, our certified technicians ensure your washing machine runs smoothly.",
     },
     2: {
-      brands:
-        "LG, Samsung, Whirlpool, Godrej, Haier, Panasonic, Voltas Beko, Bosch, Siemens",
+      brands: "We repair all brands",
       types: "Single Door, Double Door, Side-by-Side",
       extra:
         "Our fridge service covers cooling issues, gas refilling, compressor replacement, and thermostat problems. We use genuine parts for all repairs.",
@@ -30,14 +29,13 @@ export default function ServiceDetails({ service }) {
         "Safe and professional electrical work for homes, including new wiring, switchboard installation, and fault repairs.",
     },
     5: {
-      brands: "Racold, Bajaj, AO Smith, Venus, Crompton, Havells, Usha",
+      brands: "We repair all brands",
       types: "Instant, Storage, Gas Geysers",
       extra:
         "Expert installation and repair for all types of geysers. We fix heating issues, leaks, and electrical faults.",
     },
     7: {
-      brands:
-        "LG, Samsung, Whirlpool, IFB, Bosch, Haier, Panasonic, Godrej, Voltas Beko, Siemens",
+      brands: "We repair all brands",
       types: "All Home Appliances",
       extra:
         "Comprehensive repair and service for all home appliances. Genuine parts and certified technicians.",

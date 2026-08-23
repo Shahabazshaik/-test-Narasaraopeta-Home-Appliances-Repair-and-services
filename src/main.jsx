@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import ServiceDetails from "./components/ServiceDetails";
@@ -57,9 +57,20 @@ const otherHomeAppliancesService = {
     "https://www.lg.com/in/images/washing-machines/md07518199/gallery/medium01.jpg",
 };
 
+const serviceAreas = [
+  "Satulur, Andhra Pradesh, India",
+  "Ravipadu, Andhra Pradesh, India",
+  "Rompicharla, Andhra Pradesh, India",
+  "Narasaraopeta, Andhra Pradesh, India",
+  "Chilakaluripet, Andhra Pradesh, India",
+  "Uppalapadu, Andhra Pradesh 522603, India",
+  "Issapalem, Mulakaluru, Andhra Pradesh 522603, India",
+];
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
+      <RouteSEO />
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/service/:id" element={<ServiceDetailsWrapper />} />
@@ -95,6 +106,94 @@ ReactDOM.createRoot(document.getElementById("root")).render(
     </BrowserRouter>
   </React.StrictMode>,
 );
+
+function RouteSEO() {
+  const location = useLocation();
+  const siteUrl = "https://www.narasaraopetrepair.com";
+  const seoByPath = {
+    "/": {
+      title:
+        "Washing Machine Repair & AC Service in Narasaraopet | Open 24 Hours",
+      description:
+        "Open 24 hours for washing machine repair and AC service in Narasaraopet. We provide fast doorstep visits for leaks, drainage, spin, cooling, installation and electrical repairs.",
+    },
+    "/ac-repair-narasaraopet": {
+      title: "AC Repair & Service in Narasaraopet | Open 24 Hours",
+      description:
+        "Open 24 hours for AC repair and service in Narasaraopet. We provide doorstep AC servicing, installation, gas charging, cooling repairs, and inverter AC support.",
+      service: "AC repair and air conditioner service",
+    },
+    "/washing-machine-repair-narasaraopet": {
+      title:
+        "Washing Machine Repair in Narasaraopet | Open 24 Hours",
+      description:
+        "Open 24 hours for washing machine repair in Narasaraopet. We fix drum, drainage, water leakage, spin, and electrical problems with fast doorstep service.",
+      service: "Washing machine repair",
+    },
+  };
+
+  useEffect(() => {
+    const page = seoByPath[location.pathname] || seoByPath["/"];
+
+    const canonicalUrl = `${siteUrl}${location.pathname}`;
+    document.title = page.title;
+    document.querySelector('meta[name="description"]')?.setAttribute(
+      "content",
+      page.description,
+    );
+    document.querySelector('meta[property="og:title"]')?.setAttribute(
+      "content",
+      page.title,
+    );
+    document.querySelector('meta[property="og:description"]')?.setAttribute(
+      "content",
+      page.description,
+    );
+    document.querySelector('meta[property="og:url"]')?.setAttribute(
+      "content",
+      canonicalUrl,
+    );
+    document.querySelector('meta[name="twitter:title"]')?.setAttribute(
+      "content",
+      page.title,
+    );
+    document.querySelector('meta[name="twitter:description"]')?.setAttribute(
+      "content",
+      page.description,
+    );
+    document.querySelector('link[rel="canonical"]')?.setAttribute(
+      "href",
+      canonicalUrl,
+    );
+
+    let structuredData = document.getElementById("service-structured-data");
+    if (!structuredData) {
+      structuredData = document.createElement("script");
+      structuredData.id = "service-structured-data";
+      structuredData.type = "application/ld+json";
+      document.head.appendChild(structuredData);
+    }
+    structuredData.textContent = JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Service",
+      name: page.service || "Home appliance repair",
+      serviceType: page.service || "Home appliance repair",
+      areaServed: serviceAreas.map((area) => ({
+        "@type": "Place",
+        name: area,
+      })),
+      provider: {
+        "@type": "LocalBusiness",
+        name: "Narasaraopeta Home Appliances Repair",
+        telephone: "+919381283935",
+        url: siteUrl,
+        openingHours: "Mo-Su 00:00-23:59",
+      },
+    });
+  }, [location.pathname]);
+
+  return null;
+}
 
 function ServiceDetailsWrapper() {
   const location = useLocation();

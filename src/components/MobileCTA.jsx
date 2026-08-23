@@ -2,25 +2,23 @@ import "./MobileCTA.css";
 
 export default function MobileCTA() {
   return (
-    <a href="tel:9381283935" className="mobile-cta" aria-label="Call Now">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
-        viewBox="0 0 32 32"
-        className="mobile-cta-icon"
-        aria-hidden="true"
+    <div className="mobile-cta" aria-label="Contact options">
+      <a href="tel:+919381283935" className="mobile-cta-action mobile-cta-call">
+        <span className="mobile-cta-icon" aria-hidden="true">&#9742;</span>
+        <span className="mobile-cta-label">
+          <strong>Call Now</strong>
+          <small>Open 24 Hours</small>
+        </span>
+      </a>
+      <a
+        href="https://wa.me/919381283935?text=I%20want%20to%20book%20a%20service"
+        className="mobile-cta-action mobile-cta-whatsapp"
+        target="_blank"
+        rel="noreferrer"
       >
-        <circle cx="16" cy="16" r="16" fill="#25d366" />
-        <path
-          d="M24.5 19.7c-.4-.2-2.3-1.1-2.6-1.2-.3-.1-.5-.2-.7.2-.2.4-.8 1.2-1 1.4-.2.2-.4.3-.8.1-.4-.2-1.7-.6-3.2-2-1.2-1.1-2-2.4-2.2-2.8-.2-.4 0-.6.2-.8.2-.2.4-.4.6-.6.2-.2.2-.4.3-.6.1-.2 0-.5 0-.7 0-.2-.7-1.7-1-2.3-.3-.6-.6-.5-.8-.5-.2 0-.4 0-.6 0-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.7 0 1.6 1.2 3.1 1.4 3.3.2.2 2.3 3.6 5.7 4.9.8.3 1.4.5 1.9.6.8.2 1.5.2 2.1.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.1-1.4-.1-.1-.4-.2-.8-.4z"
-          fill="#fff"
-        />
-      </svg>
-      <div className="mobile-cta-text">
-        <span className="mobile-cta-title">Call 9381283935</span>
-        <small className="mobile-cta-sub">Open 24 Hours</small>
-      </div>
-    </a>
+        <span className="mobile-cta-icon mobile-cta-wa-icon" aria-hidden="true"></span>
+        <span>Book on WhatsApp</span>
+      </a>
+    </div>
   );
 }
