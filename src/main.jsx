@@ -11,7 +11,7 @@ const acRepairService = {
   id: 3,
   title: "AC Repair in Narasaraopet",
   description:
-    "Complete AC servicing, installation, and gas charging. We improve cooling efficiency and offer fast doorstep service.",
+    "Complete AC servicing, installation, and gas charging for better cooling and efficient performance. Fast doorstep support for homes and small businesses.",
   bgImage:
     "https://cdnl.iconscout.com/lottie/free/preview/free-ac-installation-animation-gif-download-7922394.png?f=webp",
 };
@@ -19,7 +19,7 @@ const washingMachineService = {
   id: 1,
   title: "Washing Machine Repair in Narasaraopet",
   description:
-    "Expert diagnosis and repair for all major brands and models. Whether it’s drum issues, water leakage, or electrical faults, our certified technicians ensure your washing machine runs smoothly.",
+    "Expert diagnosis and repair for household washing machines, including drum, drainage, water leakage, and motor issues. Our trained technicians provide reliable onsite support.",
   bgImage:
     "https://a1appliances.com.au/wp-content/uploads/2024/09/washing-machine-thumbs.jpg",
 };
@@ -27,7 +27,7 @@ const fridgeService = {
   id: 2,
   title: "Fridge Repair in Narasaraopet",
   description:
-    "Our fridge service covers cooling issues, gas refilling, compressor replacement, and thermostat problems. We use genuine parts for all repairs.",
+    "Reliable service for cooling problems, gas refilling, thermostat issues, and compressor faults. We keep repairs efficient and affordable.",
   bgImage:
     "https://www.heisesplumbing.com/site/wp-content/uploads/refrigerator-repair-1.jpg",
 };
@@ -36,7 +36,7 @@ const electricalService = {
   id: 4,
   title: "Electrical Services in Narasaraopet",
   description:
-    "Safe and professional electrical work for homes, including new wiring, switchboard installation, and fault repairs.",
+    "Safe and professional electrical work for homes, including new wiring, switchboard installation, lighting, and fault repairs.",
   bgImage:
     "https://pictures-ghana.jijistatic.net/54889012_NjIwLTc3Ni1lNzYzMThlZDFm.webp",
 };
@@ -44,15 +44,15 @@ const geyserService = {
   id: 5,
   title: "Geyser Repair in Narasaraopet",
   description:
-    "Expert installation and repair for all types of geysers. We fix heating issues, leaks, and electrical faults.",
+    "Professional installation and repair for instant and storage geysers, including heating faults, leak issues, and electrical faults.",
   bgImage:
     "https://5.imimg.com/data5/SELLER/Default/2022/7/IG/GL/GL/1517266/instant-geyser-repairing-service-500x500.jpg",
 };
 const otherHomeAppliancesService = {
   id: 7,
-  title: "Narasaraopet Home Appliances repair at Door Step",
+  title: "Home Appliance Repair & Maintenance",
   description:
-    "Comprehensive repair and service for all home appliances. Genuine parts and certified technicians.",
+    "Comprehensive service for home appliances, available at your doorstep with genuine parts and skilled technicians.",
   bgImage:
     "https://www.lg.com/in/images/washing-machines/md07518199/gallery/medium01.jpg",
 };
@@ -113,21 +113,22 @@ function RouteSEO() {
   const seoByPath = {
     "/": {
       title:
-        "Washing Machine Repair & AC Service in Narasaraopet | Open 24 Hours",
+        "Home Appliance Repair in Narasaraopet | AC, Fridge & Washing Machine Service",
       description:
-        "Open 24 hours for washing machine repair and AC service in Narasaraopet. We provide fast doorstep visits for leaks, drainage, spin, cooling, installation and electrical repairs.",
+        "Reliable home appliance repair in Narasaraopet for AC, washing machine, refrigerator, geyser, and electrical work. Fast doorstep service and local support in Andhra Pradesh.",
+      service: "Home appliance repair service",
     },
     "/ac-repair-narasaraopet": {
-      title: "AC Repair & Service in Narasaraopet | Open 24 Hours",
+      title: "AC Repair in Narasaraopet | Fast Doorstep Service",
       description:
-        "Open 24 hours for AC repair and service in Narasaraopet. We provide doorstep AC servicing, installation, gas charging, cooling repairs, and inverter AC support.",
-      service: "AC repair and air conditioner service",
+        "Professional AC repair and service in Narasaraopet with doorstep maintenance, installation, gas charging, cooling checks, and electrical troubleshooting.",
+      service: "AC repair and maintenance",
     },
     "/washing-machine-repair-narasaraopet": {
       title:
-        "Washing Machine Repair in Narasaraopet | Open 24 Hours",
+        "Washing Machine Repair in Narasaraopet | Local Service",
       description:
-        "Open 24 hours for washing machine repair in Narasaraopet. We fix drum, drainage, water leakage, spin, and electrical problems with fast doorstep service.",
+        "Washing machine repair in Narasaraopet covering drum, spin, drainage, water leakage, and motor issues with quick onsite support.",
       service: "Washing machine repair",
     },
   };
@@ -184,9 +185,22 @@ function RouteSEO() {
       })),
       provider: {
         "@type": "LocalBusiness",
-        name: "Narasaraopeta Home Appliances Repair",
-        telephone: "+919381283935",
+        name: "Narasaraopet Home Appliance Service",
+        telephone: "+91 9381283935",
         url: siteUrl,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "Ramireddy Pet, Narasaraopet",
+          addressLocality: "Narasaraopet",
+          addressRegion: "Andhra Pradesh",
+          postalCode: "522601",
+          addressCountry: "IN",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: "16.2335",
+          longitude: "80.0362",
+        },
         openingHours: "Mo-Su 00:00-23:59",
       },
     });

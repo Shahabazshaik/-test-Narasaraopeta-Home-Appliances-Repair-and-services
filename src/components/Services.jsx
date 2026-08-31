@@ -68,9 +68,9 @@ export default function Services() {
 
     {
       id: 7,
-      title: "Narasaraopet Home Appliances repair at Door Step",
+      title: "Home Appliance Repair & Maintenance",
       description:
-        "Repair and maintenance for other home appliances like TV, fans, submersible motors, and more.",
+        "Repair and maintenance for other household appliances, including TV, fans, submersible motors, and general service needs.",
       // icon: '🛠️',
       features: ["TV Repair", "Submersible Motor", "General Appliances"],
       bgImage: "",

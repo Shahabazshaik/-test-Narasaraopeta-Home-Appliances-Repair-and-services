@@ -11,12 +11,12 @@ const features = [
     alt: "100% Genuine Products Logo",
   },
   {
-    title: "Certified Technicians",
+    title: "Skilled Technicians",
     description:
-      "Our team consists of certified and experienced professionals who are experts in their respective fields, guaranteeing reliable and efficient service every time.",
+      "Our team consists of trained and experienced professionals who know how to diagnose issues quickly and complete repairs efficiently and safely.",
     img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtD3rQk-iH06A14APYxV96bN1WKX5gYcNLYLJQnQoDbw&s",
     link: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtD3rQk-iH06A14APYxV96bN1WKX5gYcNLYLJQnQoDbw&s",
-    alt: "Certified Technicians Logo",
+    alt: "Skilled Technicians Logo",
   },
   {
     title: "Fast Doorstep Service",

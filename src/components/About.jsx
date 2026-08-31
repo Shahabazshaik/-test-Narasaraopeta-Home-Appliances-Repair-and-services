@@ -10,10 +10,10 @@ export default function About() {
             <p>
               With over 10 years of experience in home appliances and electrical
               repair, we have become the trusted choice for homeowners and
-              businesses. Our team of certified technicians is dedicated to
-              providing quick, reliable, and affordable repair services for
-              washing machines, refrigerators, air conditioners, electrical
-              systems, geysers, and plumbing needs.
+              businesses. Our trained technicians are dedicated to providing
+              quick, reliable, and affordable repair services for washing
+              machines, refrigerators, air conditioners, electrical systems,
+              geysers, and other home appliance needs.
             </p>
             <div className="stats">
               <div className="stat">

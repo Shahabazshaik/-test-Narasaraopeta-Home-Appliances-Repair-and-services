@@ -59,10 +59,10 @@ export default function Header() {
       </button>
       {/* Small horizontal menu under hamburger and heading */}
       <div className="header-mini-menu">
-        <Link to="/ac-repair-narasaraopet" className="mini-menu-link">
+        {/* <Link to="/ac-repair-narasaraopet" className="mini-menu-link">
           AC Repair
-        </Link>
-        <Link
+        </Link> */}
+        {/* <Link
           to="/washing-machine-repair-narasaraopet"
           className="mini-menu-link"
         >
@@ -79,7 +79,7 @@ export default function Header() {
         </Link>
         <Link to="/other-home-appliances-repair" className="mini-menu-link">
           Other
-        </Link>
+        </Link> */}
       </div>
       {showServices && (
         <div ref={dropdownRef} className="services-dropdown">
@@ -144,9 +144,9 @@ export default function Header() {
       <div className="container">
         <div className="logo">
           <h1>
-            <span className="heading-line1">Narasaraopet Home Appliances repair at Door Step</span>
+            <span className="heading-line1">Narasaraopet Home Appliance Service</span>
             <br />
-            <span className="heading-line2">Repairs & services at your doorstep </span>
+            <span className="heading-line2">Repairs & maintenance at your doorstep</span>
           </h1>
         </div>
         <nav className="nav">

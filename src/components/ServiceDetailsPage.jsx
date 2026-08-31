@@ -6,48 +6,39 @@ export default function ServiceDetailsPage({ service }) {
   // Detailed info for each service
   const serviceDetails = {
     1: {
-      brands: "We repair all brands",
       types: "Front Load, Top Load, Semi Automatic",
       extra:
-        "We provide expert diagnosis and repair for all major brands and models. Whether it’s drum issues, water leakage, or electrical faults, our certified technicians ensure your washing machine runs smoothly.",
+        "Expert diagnosis and repair for household washing machines, including drum issues, water leakage, and motor problems. Our trained technicians offer reliable onsite support.",
     },
     2: {
-      brands:
-        "We repair all brands",
       types: "Single Door, Double Door, Side-by-Side",
       extra:
-        "Our fridge service covers cooling issues, gas refilling, compressor replacement, and thermostat problems. We use genuine parts for all repairs.",
+        "Professional fridge service for cooling issues, gas refilling, compressor faults, and thermostat problems. We focus on efficient repairs and long-term reliability.",
     },
     3: {
-      brands: "We repair all brands",
       types: "Split AC, Window AC, Inverter AC",
       extra:
-        "Complete AC servicing, installation, and gas charging. We improve cooling efficiency and offer fast doorstep service.",
+        "Complete AC servicing, installation, gas charging, and cooling checks to improve performance and keep your space comfortable.",
     },
     4: {
-      brands: "All electrical brands and wiring standards",
       types: "New House Wiring, Switchboard, Lighting, Repairs",
       extra:
-        "Safe and professional electrical work for homes, including new wiring, switchboard installation, and fault repairs.",
+        "Safe and professional electrical work for homes, including wiring upgrades, switchboard installation, and fault repairs.",
     },
     5: {
-      brands: "We repair all brands",
       types: "Instant, Storage, Gas Geysers",
       extra:
-        "Expert installation and repair for all types of geysers. We fix heating issues, leaks, and electrical faults.",
+        "Professional installation and repair for geysers, covering heating faults, leak issues, and electrical problems with dependable service.",
     },
     6: {
-      brands: "All major plumbing brands",
       types: "Kitchen, Bathroom, Water Tank, Piping",
       extra:
-        "Professional plumbing services for leakages, blockages, and installations. Fast and reliable solutions.",
+        "Fast and reliable plumbing support for leakages, blockages, and installation needs, delivered with efficient workmanship.",
     },
     7: {
-      brands:
-        "We repair all brands",
       types: "All Home Appliances",
       extra:
-        "Comprehensive repair and service for all home appliances. Genuine parts and certified technicians.",
+        "Comprehensive repair and maintenance for home appliances with genuine parts and skilled technicians at your doorstep.",
     },
   };
 
@@ -63,10 +54,7 @@ export default function ServiceDetailsPage({ service }) {
         <p className="service-desc">{service.description}</p>
         <div className="service-info">
           <div>
-            <strong>Brands:</strong> {details.brands}
-          </div>
-          <div>
-            <strong>Types:</strong> {details.types}
+            <strong>Appliance Types:</strong> {details.types}
           </div>
         </div>
         {details.extra && (
