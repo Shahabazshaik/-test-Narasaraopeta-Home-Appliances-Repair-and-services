@@ -70,9 +70,9 @@ export default function Services() {
       id: 7,
       title: "Home Appliance Repair & Maintenance",
       description:
-        "Repair and maintenance for other household appliances, including TV, fans, submersible motors, and general service needs.",
+        "Repair and maintenance for household appliances, including fans, submersible motors, and general service needs.",
       // icon: '🛠️',
-      features: ["TV Repair", "Submersible Motor", "General Appliances"],
+      features: ["Fan Repair", "Submersible Motor", "General Appliances"],
       bgImage: "",
     },
   ];
