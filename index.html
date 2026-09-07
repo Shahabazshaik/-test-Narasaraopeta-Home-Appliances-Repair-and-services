@@ -47,6 +47,12 @@
       }
     </script>
     <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap"
+      rel="stylesheet"
+    />
     <!-- Google Search Console Verification -->
     <meta
       name="google-site-verification"
@@ -55,7 +61,7 @@
     <link
       rel="icon"
       type="image/svg+xml"
-      href="https://logo-icons.com/cdn/shop/files/1066-logo-1713383227.858color-1E88E5.svg?v=1713403114&width=416"
+      href="/power-logo.svg"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
@@ -66,6 +72,9 @@
       content="Professional home appliance repair in Narasaraopet for AC, fridge, washing machine, geyser, and electrical work. Fast doorstep service and reliable support in Narasaraopet, Andhra Pradesh. Call 9381283935."
     />
     <meta name="author" content="Narasaraopet Home Appliance Service" />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <meta name="googlebot" content="index, follow" />
+    <meta name="theme-color" content="#1e40af" />
     <meta
       name="keywords"
       content="home appliance repair Narasaraopet, AC repair Narasaraopet, fridge repair Narasaraopet, washing machine repair Narasaraopet, geyser repair Narasaraopet, electrical service Narasaraopet, doorstep appliance service, local repair service Narasaraopet, home appliance service Andhra Pradesh"
@@ -83,10 +92,11 @@
       content="Fast, reliable, and affordable appliance repair in Narasaraopet. AC, washing machine, refrigerator, geyser, and electrical service at your doorstep."
     />
     <meta property="og:type" content="website" />
+    <meta property="og:locale" content="en_IN" />
     <meta property="og:url" content="https://www.narasaraopetrepair.com/" />
     <meta
       property="og:image"
-      content="https://logo-icons.com/cdn/shop/files/1066-logo-1713383227.858color-1E88E5.svg?v=1713403114&width=416"
+      content="https://www.narasaraopetrepair.com/power-logo.svg"
     />
     <meta name="twitter:card" content="summary_large_image" />
     <meta
@@ -99,49 +109,83 @@
     />
     <meta
       name="twitter:image"
-      content="https://logo-icons.com/cdn/shop/files/1066-logo-1713383227.858color-1E88E5.svg?v=1713403114&width=416"
+      content="https://www.narasaraopetrepair.com/power-logo.svg"
     />
     <link rel="canonical" href="https://www.narasaraopetrepair.com/" />
     <!-- Structured Data: LocalBusiness -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Narasaraopet Home Appliance Service",
-        "image": "https://logo-icons.com/cdn/shop/files/1066-logo-1713383227.858color-1E88E5.svg?v=1713403114&width=416",
-        "@id": "https://www.narasaraopetrepair.com/",
-        "url": "https://www.narasaraopetrepair.com/",
-        "telephone": "+91-9381283935",
-        "address": {
-          "@type": "PostalAddress",
-          "streetAddress": "Ramireddy Pet, Narasaraopet",
-          "addressLocality": "Narasaraopet",
-          "addressRegion": "Andhra Pradesh",
-          "postalCode": "522601",
-          "addressCountry": "IN"
-        },
-        "geo": {
-          "@type": "GeoCoordinates",
-          "latitude": "16.2335",
-          "longitude": "80.0362"
-        },
-        "openingHoursSpecification": [
+        "@graph": [
           {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-              "Sunday"
+            "@type": "LocalBusiness",
+            "@id": "https://www.narasaraopetrepair.com/#business",
+            "name": "Narasaraopet Home Appliance Service",
+            "image": "https://www.narasaraopetrepair.com/power-logo.svg",
+            "url": "https://www.narasaraopetrepair.com/",
+            "telephone": "+91-9381283935",
+            "priceRange": "$$",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Ramireddy Pet, Narasaraopet",
+              "addressLocality": "Narasaraopet",
+              "addressRegion": "Andhra Pradesh",
+              "postalCode": "522601",
+              "addressCountry": "IN"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "16.2335",
+              "longitude": "80.0362"
+            },
+            "areaServed": [
+              "Narasaraopet",
+              "Chilakaluripet",
+              "Rompicharla",
+              "Ravipadu",
+              "Satulur",
+              "Uppalapadu",
+              "Issapalem"
             ],
-            "opens": "08:00",
-            "closes": "20:00"
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "08:00",
+              "closes": "20:00"
+            },
+            "description": "Home appliance repair in Narasaraopet for AC, refrigerators, washing machines, geysers, and electrical services with doorstep support.",
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Home appliance repair services",
+              "itemListElement": [
+                "AC repair and service",
+                "Washing machine repair",
+                "Fridge repair",
+                "Geyser repair",
+                "Electrical services",
+                "Home appliance repair"
+              ]
+            }
+          },
+          {
+            "@type": "WebSite",
+            "@id": "https://www.narasaraopetrepair.com/#website",
+            "url": "https://www.narasaraopetrepair.com/",
+            "name": "Narasaraopet Home Appliance Service",
+            "publisher": {
+              "@id": "https://www.narasaraopetrepair.com/#business"
+            },
+            "inLanguage": "en-IN"
           }
-        ],
-        "description": "Top-rated home appliance repair in Narasaraopet & nearby. AC Repair, fridge repair, washing machine repair, geyser repair, and electrical repairs. Fast doorstep service."
+        ]
       }
     </script>
   </head>

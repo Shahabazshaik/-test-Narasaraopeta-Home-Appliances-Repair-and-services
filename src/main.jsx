@@ -131,6 +131,30 @@ function RouteSEO() {
         "Washing machine repair in Narasaraopet covering drum, spin, drainage, water leakage, and motor issues with quick onsite support.",
       service: "Washing machine repair",
     },
+    "/fridge-repair-narasaraopet": {
+      title: "Fridge Repair in Narasaraopet | Doorstep Service",
+      description:
+        "Fridge repair in Narasaraopet for cooling problems, gas refilling, compressor faults, thermostat issues, and refrigerator servicing at home.",
+      service: "Refrigerator and fridge repair",
+    },
+    "/electrical-services-narasaraopet": {
+      title: "Electrical Services in Narasaraopet | Home Electrician",
+      description:
+        "Professional electrical services in Narasaraopet for home wiring, switchboards, lighting, installations, and electrical fault repairs.",
+      service: "Home electrical services",
+    },
+    "/geyser-repair-narasaraopet": {
+      title: "Geyser Repair in Narasaraopet | Installation & Service",
+      description:
+        "Geyser repair and installation in Narasaraopet for instant and storage water heaters, heating faults, leaks, and electrical problems.",
+      service: "Geyser repair and installation",
+    },
+    "/other-home-appliances-repair": {
+      title: "Home Appliance Repair in Narasaraopet | Doorstep Service",
+      description:
+        "Home appliance repair in Narasaraopet with skilled technicians, genuine parts, and convenient doorstep service for household appliances.",
+      service: "Home appliance repair and maintenance",
+    },
   };
 
   useEffect(() => {

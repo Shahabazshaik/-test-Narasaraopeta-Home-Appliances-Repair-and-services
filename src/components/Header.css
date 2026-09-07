@@ -15,19 +15,6 @@
   box-shadow: 0 2px 8px #0002;
   font-weight: 500;
   transition: background 0.18s;
-  animation: blinkPhone 1.1s infinite;
-}
-
-@keyframes blinkPhone {
-  0%,
-  100% {
-    opacity: 1;
-    box-shadow: 0 2px 8px #0002;
-  }
-  50% {
-    opacity: 0.5;
-    box-shadow: 0 0 12px 2px #ffe082;
-  }
 }
 .header-phone-corner:hover {
   background: #2563eb;
@@ -96,6 +83,24 @@
   align-items: center;
 }
 
+.brand-lockup {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #fff;
+}
+
+.brand-mark {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  filter: drop-shadow(0 5px 10px rgba(0, 0, 0, 0.2));
+}
+
+.brand-copy {
+  display: block;
+}
+
 .logo h1 {
   font-size: 1.6rem;
   margin: 0;
@@ -136,7 +141,20 @@
   color: white;
   font-weight: 600;
   text-decoration: none;
+  position: relative;
   transition: opacity 0.18s ease;
+}
+
+.nav-contact-link {
+  background: #f97316;
+  border-radius: 999px;
+  padding: 9px 16px;
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.18);
+}
+
+.nav-contact-link:hover {
+  background: #ea580c;
+  opacity: 1 !important;
 }
 
 .header-phone {
@@ -213,6 +231,10 @@
   transition: width 0.2s ease;
 }
 
+.nav-contact-link::after {
+  display: none;
+}
+
 .nav a:hover::after {
   width: 100%;
 }
@@ -232,6 +254,7 @@
     gap: 12px;
     flex-wrap: wrap;
     justify-content: center;
+    padding-bottom: 2px;
   }
 
   .logo h1 {
@@ -241,6 +264,16 @@
     padding-top: 8px;
   }
 
+  .brand-lockup {
+    gap: 9px;
+  }
+
+  .brand-mark {
+    width: 48px;
+    height: 48px;
+    flex-basis: 48px;
+  }
+
 /* Adjust line sizes on small screens */
 @media (max-width: 480px) {
   .heading-line1 {
@@ -248,6 +281,26 @@
   }
   .heading-line2 {
     font-size: 1.05rem;
+  }
+
+  .brand-mark {
+    width: 42px;
+    height: 42px;
+    flex-basis: 42px;
+  }
+}
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 8px 12px;
+  }
+
+  .nav a {
+    font-size: 0.86rem;
+  }
+
+  .nav-contact-link {
+    padding: 7px 12px;
   }
 }
 }

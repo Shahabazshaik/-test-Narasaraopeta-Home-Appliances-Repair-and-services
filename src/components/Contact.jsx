@@ -21,7 +21,7 @@ export default function Contact() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // Build WhatsApp message
-    const phoneNumber = "919390609601";
+    const phoneNumber = "919381283935";
     const messageLines = [
       `Name: ${formData.name}`,
       `Email: ${formData.email}`,

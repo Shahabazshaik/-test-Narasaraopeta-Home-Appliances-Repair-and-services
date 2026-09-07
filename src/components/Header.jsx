@@ -143,15 +143,23 @@ export default function Header() {
       )}
       <div className="container">
         <div className="logo">
+          <a href="#home" className="brand-lockup" aria-label="Narasaraopet Home Appliance Service home">
+            <img src="/power-logo.svg" alt="" className="brand-mark" />
+            <span className="brand-copy">
           <h1>
             <span className="heading-line1">Narasaraopet Home Appliance Service</span>
             <br />
             <span className="heading-line2">Repairs & maintenance at your doorstep</span>
           </h1>
+            </span>
+          </a>
         </div>
         <nav className="nav">
-          {/* <a href="#home">Home</a>
-          <a href="#contact">Contact</a> */}
+          <a href="#home">Home</a>
+          <a href="#services">Services</a>
+          <a href="#about">About</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact" className="nav-contact-link">Book a service</a>
         </nav>
       </div>
     </header>

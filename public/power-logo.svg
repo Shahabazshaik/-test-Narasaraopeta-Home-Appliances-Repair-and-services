@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-labelledby="title desc">
+  <title id="title">Narasaraopet Home Appliance Service logo</title>
+  <desc id="desc">A blue appliance service badge with an orange lightning bolt</desc>
+  <defs>
+    <linearGradient id="badge" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#1e40af"/>
+      <stop offset="1" stop-color="#0891b2"/>
+    </linearGradient>
+  </defs>
+  <circle cx="128" cy="128" r="116" fill="url(#badge)"/>
+  <circle cx="128" cy="128" r="96" fill="none" stroke="#ffffff" stroke-opacity=".28" stroke-width="4"/>
+  <path fill="#ffffff" d="M79 74h98a13 13 0 0 1 13 13v83a13 13 0 0 1-13 13H79a13 13 0 0 1-13-13V87a13 13 0 0 1 13-13Zm0 13a1 1 0 0 0-1 1v82a1 1 0 0 0 1 1h98a1 1 0 0 0 1-1V88a1 1 0 0 0-1-1H79Z"/>
+  <path fill="#f97316" d="m139 93-35 48h25l-9 37 35-52h-25l9-33Z"/>
+  <circle cx="91" cy="102" r="5" fill="#f97316"/>
+  <circle cx="108" cy="102" r="5" fill="#0891b2"/>
+</svg>
