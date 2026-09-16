@@ -57,15 +57,16 @@ const otherHomeAppliancesService = {
     "https://www.lg.com/in/images/washing-machines/md07518199/gallery/medium01.jpg",
 };
 
-const serviceAreas = [
-  "Satulur, Andhra Pradesh, India",
-  "Ravipadu, Andhra Pradesh, India",
-  "Rompicharla, Andhra Pradesh, India",
-  "Narasaraopeta, Andhra Pradesh, India",
-  "Chilakaluripet, Andhra Pradesh, India",
-  "Uppalapadu, Andhra Pradesh 522603, India",
-  "Issapalem, Mulakaluru, Andhra Pradesh 522603, India",
-];
+const serviceArea = {
+  "@type": "GeoCircle",
+  geoMidpoint: {
+    "@type": "GeoCoordinates",
+    latitude: "16.2335",
+    longitude: "80.0362",
+  },
+  geoRadius: "10000",
+  name: "Narasaraopet and nearby areas within 10 km",
+};
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -115,7 +116,7 @@ function RouteSEO() {
       title:
         "Home Appliance Repair in Narasaraopet | AC, Fridge & Washing Machine Service",
       description:
-        "Reliable home appliance repair in Narasaraopet for AC, washing machine, refrigerator, geyser, and electrical work. Fast doorstep service and local support in Andhra Pradesh.",
+        "Reliable home appliance repair in Narasaraopet and nearby areas within 10 km. AC, washing machine, refrigerator, geyser, and electrical service at your doorstep.",
       service: "Home appliance repair service",
     },
     "/ac-repair-narasaraopet": {
@@ -200,33 +201,38 @@ function RouteSEO() {
     }
     structuredData.textContent = JSON.stringify({
       "@context": "https://schema.org",
-      "@type": "Service",
-      name: page.service || "Home appliance repair",
-      serviceType: page.service || "Home appliance repair",
-      areaServed: serviceAreas.map((area) => ({
-        "@type": "Place",
-        name: area,
-      })),
-      provider: {
-        "@type": "LocalBusiness",
-        name: "Narasaraopet Home Appliance Service",
-        telephone: "+91 9381283935",
-        url: siteUrl,
-        address: {
-          "@type": "PostalAddress",
-          streetAddress: "Ramireddy Pet, Narasaraopet",
-          addressLocality: "Narasaraopet",
-          addressRegion: "Andhra Pradesh",
-          postalCode: "522601",
-          addressCountry: "IN",
+      "@graph": [
+        {
+          "@type": "Service",
+          "@id": `${canonicalUrl}#service`,
+          name: page.service || "Home appliance repair",
+          serviceType: page.service || "Home appliance repair",
+          areaServed: serviceArea,
+          provider: { "@id": `${siteUrl}/#business` },
         },
-        geo: {
-          "@type": "GeoCoordinates",
-          latitude: "16.2335",
-          longitude: "80.0362",
+        {
+          "@type": "LocalBusiness",
+          "@id": `${siteUrl}/#business`,
+          name: "Narasaraopet Home Appliance Service",
+          telephone: "+91 9381283935",
+          url: siteUrl,
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "Ramireddy Pet, Narasaraopet",
+            addressLocality: "Narasaraopet",
+            addressRegion: "Andhra Pradesh",
+            postalCode: "522601",
+            addressCountry: "IN",
+          },
+          geo: {
+            "@type": "GeoCoordinates",
+            latitude: "16.2335",
+            longitude: "80.0362",
+          },
+          areaServed: serviceArea,
+          openingHours: "Mo-Su 08:00-22:00",
         },
-        openingHours: "Mo-Su 00:00-23:59",
-      },
+      ],
     });
   }, [location.pathname]);
 

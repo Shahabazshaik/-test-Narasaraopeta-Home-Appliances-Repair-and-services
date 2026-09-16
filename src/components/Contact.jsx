@@ -41,7 +41,8 @@ export default function Contact() {
       <div className="container">
         <h2>Contact Us</h2>
         <p className="section-subtitle">
-          Get in touch for a free quote or emergency service
+          Get a free quote for doorstep appliance repair in Narasaraopet and
+          nearby areas within approximately 10 km.
         </p>
         <div className="contact-wrapper">
           <div className="contact-info">

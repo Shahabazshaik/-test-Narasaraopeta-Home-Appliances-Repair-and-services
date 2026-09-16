@@ -1,3 +1,95 @@
+/* Homepage visual overrides */
+.hero {
+  color: #fff;
+  min-height: 610px !important;
+  padding: 112px 10px 126px;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(9, 38, 49, 0.86) 0%, rgba(9, 38, 49, 0.56) 48%, rgba(9, 38, 49, 0.15) 100%);
+}
+
+.hero-content {
+  max-width: 720px;
+  text-align: left !important;
+}
+
+.hero-content.hero-overlay {
+  width: min(1240px, 100%);
+  padding: 32px 28px;
+  background: transparent;
+  border-radius: 0;
+}
+
+.hero-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+  text-align: left !important;
+}
+
+.hero-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;
+  margin: 0 0 28px;
+  text-align: left !important;
+}
+
+.hero-badge-wrapper {
+  margin: 0 0 20px;
+}
+
+.cta-badge {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 4px;
+  animation: none;
+}
+
+.hero-cta-row {
+  justify-content: flex-start;
+}
+
+.cta-button {
+  background: var(--accent-color);
+  border-radius: 5px;
+  font-weight: 700;
+  animation: none;
+}
+
+.cta-button::after {
+  content: none;
+}
+
+.cta-button:hover {
+  background: #d96d43;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 560px !important;
+    padding: 80px 12px;
+  }
+
+  .hero-content.hero-overlay {
+    padding: 24px 8px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 11vw, 3.4rem);
+  }
+
+  .hero-mobile-service-text {
+    display: none;
+  }
+}
 @media (max-width: 768px) {
   .hero-mobile-service-text {
     color: #f6f5f5;
@@ -455,5 +547,92 @@
   .cta-button {
     padding: 12px 30px;
     font-size: 1rem;
+  }
+}
+
+/* Final homepage visual layer */
+.hero {
+  color: #fff;
+  min-height: 610px !important;
+  padding: 112px 10px 126px;
+  background-size: cover !important;
+  background-position: center !important;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(9, 38, 49, 0.86) 0%, rgba(9, 38, 49, 0.56) 48%, rgba(9, 38, 49, 0.15) 100%);
+}
+
+.hero-content {
+  max-width: 720px;
+  text-align: left;
+}
+
+.hero-content.hero-overlay {
+  width: min(1240px, 100%);
+  padding: 32px 28px;
+  background: transparent;
+  border-radius: 0;
+}
+
+.hero-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4.6rem);
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}
+
+.hero-text {
+  font-family: "DM Sans", sans-serif;
+  font-size: 1.2rem;
+  margin: 0 0 28px;
+}
+
+.hero-badge-wrapper {
+  margin: 0 0 20px;
+}
+
+.cta-badge {
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.24);
+  border-radius: 4px;
+  animation: none;
+}
+
+.hero-cta-row {
+  justify-content: flex-start;
+}
+
+.cta-button {
+  background: var(--accent-color);
+  border-radius: 5px;
+  font-weight: 700;
+  animation: none;
+}
+
+.cta-button::after {
+  content: none;
+}
+
+.cta-button:hover {
+  background: #d96d43;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero {
+    min-height: 560px !important;
+    padding: 80px 12px;
+  }
+
+  .hero-content.hero-overlay {
+    padding: 24px 8px;
+  }
+
+  .hero-title {
+    font-size: clamp(2.25rem, 11vw, 3.4rem);
   }
 }

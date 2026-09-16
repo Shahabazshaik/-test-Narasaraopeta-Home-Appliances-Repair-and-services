@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,21 +7,22 @@
 }
 
 :root {
-  --primary-color: #1e40af;
-  --secondary-color: #0891b2;
-  --accent-color: #ea580c;
-  --dark-color: #1f2937;
-  --light-color: #f3f4f6;
-  --text-color: #374151;
-  --border-radius: 8px;
-  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --primary-color: #0d5c63;
+  --secondary-color: #1a7f86;
+  --accent-color: #ef8354;
+  --dark-color: #173042;
+  --light-color: #f2f7f6;
+  --text-color: #4c6268;
+  --border-radius: 6px;
+  --shadow: 0 14px 40px rgba(23, 48, 66, 0.1);
+  --line-color: #dce8e6;
 }
 
 body {
-  font-family: "Manrope", sans-serif;
+  font-family: "DM Sans", sans-serif;
   color: var(--text-color);
   line-height: 1.6;
-  background-color: #fff;
+  background-color: #fbfcfb;
 }
 
 /* Global typography adjustments for consistent, professional look */
@@ -38,7 +41,7 @@ h1 {
 }
 h2 {
   font-family: "Space Grotesk", sans-serif;
-  font-size: 1.35rem;
+  font-size: clamp(2rem, 4vw, 3rem);
   line-height: 1.25;
   color: var(--dark-color);
 }
@@ -65,9 +68,9 @@ html {
 }
 
 .container {
-  max-width: 1200px;
+  max-width: 1240px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 28px;
 }
 
 button {
@@ -75,6 +78,15 @@ button {
   border: none;
   font-size: 1rem;
   transition: all 0.3s ease;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 3px solid rgba(239, 131, 84, 0.55);
+  outline-offset: 3px;
 }
 
 a {

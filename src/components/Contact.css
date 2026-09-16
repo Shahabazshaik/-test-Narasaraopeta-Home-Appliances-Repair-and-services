@@ -84,7 +84,7 @@
   }
 }
 .contact {
-  background-color: var(--light-color);
+  background: #e8f1ef;
 }
 
 .contact-wrapper {
@@ -129,6 +129,7 @@
   padding: 40px;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
+  border: 1px solid var(--line-color);
 }
 
 .form-group {
