@@ -33,7 +33,16 @@ export default function ServiceCard({ service }) {
           : { cursor: "pointer" }
       }
       onClick={() =>
-        navigate("/service-details/" + service.id, { state: { service } })
+        navigate(
+          service.id === 1
+            ? "/washing-machine-repair-narasaraopet"
+            : service.id === 3
+              ? "/ac-repair-narasaraopet"
+            : "/service-details/" + service.id,
+          service.id === 1 || service.id === 3
+            ? undefined
+            : { state: { service } },
+        )
       }
     >
       {service.bgImage && (

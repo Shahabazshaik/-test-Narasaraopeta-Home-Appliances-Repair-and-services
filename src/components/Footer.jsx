@@ -8,7 +8,7 @@ export default function Footer() {
       <div className="container">
         <div className="footer-content">
           <div className="footer-section">
-            <h3>Narasaraopet Home Appliance Service</h3>
+            <h3>Narasaraopet Home Appliances Repair at Door Step</h3>
             <p>
               Your trusted local partner for appliance and electrical repair
               needs. Professional, reliable, and affordable doorstep care.
@@ -68,7 +68,7 @@ export default function Footer() {
 
         <div className="footer-bottom">
           <p>
-            &copy; {currentYear} Narasaraopet Home Appliance Service. All rights reserved.
+            &copy; {currentYear} Narasaraopet Home Appliances Repair at Door Step. All rights reserved.
           </p>
         </div>
       </div>

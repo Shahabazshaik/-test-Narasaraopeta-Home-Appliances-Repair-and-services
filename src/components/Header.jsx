@@ -146,11 +146,11 @@ export default function Header() {
           <a href="#home" className="brand-lockup" aria-label="Narasaraopet Home Appliance Service home">
             <img src="/power-logo.svg" alt="" className="brand-mark" />
             <span className="brand-copy">
-          <h1>
-            <span className="heading-line1">Narasaraopet Home Appliance Service</span>
+          <div className="header-brand-heading">
+            <span className="heading-line1">Narasaraopet Home Appliances Repair at Door Step</span>
             <br />
             <span className="heading-line2">Repairs & maintenance at your doorstep</span>
-          </h1>
+          </div>
             </span>
           </a>
         </div>

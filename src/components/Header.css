@@ -92,7 +92,8 @@
   display: block;
 }
 
-.logo h1 {
+.logo h1,
+.header-brand-heading {
   font-size: 1.22rem;
   margin: 0;
   font-weight: 700;

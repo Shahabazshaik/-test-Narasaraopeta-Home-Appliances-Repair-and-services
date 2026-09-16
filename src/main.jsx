@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import ServiceDetails from "./components/ServiceDetails";
 import ServiceDetailsPage from "./components/ServiceDetailsPage";
+import WashingMachineRepairPage from "./components/WashingMachineRepairPage";
+import AcRepairPage from "./components/AcRepairPage";
 import "./index.css";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 
@@ -81,11 +83,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         />
         <Route
           path="/ac-repair-narasaraopet"
-          element={<ServiceDetailsPage service={acRepairService} />}
+          element={<AcRepairPage />}
         />
         <Route
           path="/washing-machine-repair-narasaraopet"
-          element={<ServiceDetailsPage service={washingMachineService} />}
+          element={<WashingMachineRepairPage />}
         />
         <Route
           path="/fridge-repair-narasaraopet"
@@ -120,17 +122,38 @@ function RouteSEO() {
       service: "Home appliance repair service",
     },
     "/ac-repair-narasaraopet": {
-      title: "AC Repair in Narasaraopet | Fast Doorstep Service",
+      title: "AC Repair in Narasaraopet | Doorstep AC Service",
       description:
-        "Professional AC repair and service in Narasaraopet with doorstep maintenance, installation, gas charging, cooling checks, and electrical troubleshooting.",
+        "AC repair and service in Narasaraopet at your doorstep. Split AC diagnosis, servicing, cooling problems, water leakage and common AC repairs. Call 9381283935.",
       service: "AC repair and maintenance",
+      breadcrumb: "AC Repair in Narasaraopet",
+      faqs: [
+        {
+          question: "Do you provide doorstep AC repair?",
+          answer: "Narasaraopet Home Appliances Repair at Door Step provides doorstep AC inspection and service in Narasaraopet and nearby areas, subject to appointment availability.",
+        },
+        {
+          question: "How can I book AC repair in Narasaraopet?",
+          answer: "Call +91 9381283935 or send a WhatsApp message with your location and AC problem to request an appointment.",
+        },
+      ],
     },
     "/washing-machine-repair-narasaraopet": {
-      title:
-        "Washing Machine Repair in Narasaraopet | Local Service",
+      title: "Washing Machine Repair in Narasaraopet | Doorstep Service",
       description:
-        "Washing machine repair in Narasaraopet covering drum, spin, drainage, water leakage, and motor issues with quick onsite support.",
+        "Washing machine repair in Narasaraopet at your doorstep. Service for automatic, semi-automatic, front-load and top-load washing machines. Call 9381283935.",
       service: "Washing machine repair",
+      breadcrumb: "Washing Machine Repair in Narasaraopet",
+      faqs: [
+        {
+          question: "Do you provide doorstep washing machine repair?",
+          answer: "Narasaraopet Home Appliances Repair at Door Step provides doorstep washing machine diagnosis and repair in Narasaraopet and surrounding areas, subject to appointment availability.",
+        },
+        {
+          question: "How can I book washing machine repair?",
+          answer: "Call +91 9381283935 or send a WhatsApp message with your location and washing machine problem to request an appointment.",
+        },
+      ],
     },
     "/fridge-repair-narasaraopet": {
       title: "Fridge Repair in Narasaraopet | Doorstep Service",
@@ -213,7 +236,7 @@ function RouteSEO() {
         {
           "@type": "LocalBusiness",
           "@id": `${siteUrl}/#business`,
-          name: "Narasaraopet Home Appliance Service",
+          name: "Narasaraopet Home Appliances Repair at Door Step",
           telephone: "+91 9381283935",
           url: siteUrl,
           address: {
@@ -231,6 +254,40 @@ function RouteSEO() {
           },
           areaServed: serviceArea,
           openingHours: "Mo-Su 08:00-22:00",
+        },
+        ...(page.faqs
+          ? [
+              {
+                "@type": "FAQPage",
+                "@id": `${canonicalUrl}#faq`,
+                mainEntity: page.faqs.map((faq) => ({
+                  "@type": "Question",
+                  name: faq.question,
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: faq.answer,
+                  },
+                })),
+              },
+            ]
+          : []),
+        {
+          "@type": "BreadcrumbList",
+          "@id": `${canonicalUrl}#breadcrumb`,
+          itemListElement: [
+            {
+              "@type": "ListItem",
+              position: 1,
+              name: "Home",
+              item: `${siteUrl}/`,
+            },
+            {
+              "@type": "ListItem",
+              position: 2,
+              name: page.breadcrumb || page.title,
+              item: canonicalUrl,
+            },
+          ],
         },
       ],
     });
