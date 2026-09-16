@@ -64,7 +64,7 @@ export default function ServiceDetails({ service }) {
         <h1
           style={{
             textAlign: "center",
-            color: "#1a237e",
+            color: "var(--primary-color)",
             marginBottom: "16px",
             textShadow: "0 2px 8px rgba(0,0,0,0.15)",
           }}

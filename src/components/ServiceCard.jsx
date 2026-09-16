@@ -93,14 +93,14 @@ export default function ServiceCard({ service }) {
             {service.icon}
           </span>
         </div>
-        <h3 style={{ color: "#1a237e", marginBottom: "8px" }}>
+        <h3 style={{ color: "var(--primary-color)", marginBottom: "8px" }}>
           {service.title}
         </h3>
         <p style={{ color: "#444", marginBottom: "12px" }}>
           {service.description}
         </p>
         <div className="features" style={{ marginBottom: "16px" }}>
-          <h4 style={{ color: "#3949ab", marginBottom: "6px" }}>
+          <h4 style={{ color: "var(--primary-color)", marginBottom: "6px" }}>
             Why Choose Us:
           </h4>
           <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
@@ -118,7 +118,7 @@ export default function ServiceCard({ service }) {
           className="service-button"
           type="button"
           style={{
-            background: "#1a237e",
+            background: "var(--primary-color)",
             color: "#f5f3f3",
             borderRadius: "8px",
             padding: "8px 20px",

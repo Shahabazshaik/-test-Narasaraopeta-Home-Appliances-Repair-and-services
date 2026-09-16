@@ -33,6 +33,7 @@
   font-weight: 700;
   letter-spacing: -0.045em;
   text-align: left !important;
+  animation: hero-content-rise 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-text {
@@ -41,6 +42,7 @@
   font-size: 1.2rem;
   margin: 0 0 28px;
   text-align: left !important;
+  animation: hero-content-rise 0.7s 0.12s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-badge-wrapper {
@@ -52,7 +54,7 @@
   background: rgba(255, 255, 255, 0.14);
   border: 1px solid rgba(255, 255, 255, 0.24);
   border-radius: 4px;
-  animation: none;
+  animation: hero-content-rise 0.7s 0.22s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
 
 .hero-cta-row {
@@ -73,6 +75,17 @@
 .cta-button:hover {
   background: #d96d43;
   transform: translateY(-2px);
+}
+
+@keyframes hero-content-rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @media (max-width: 768px) {
@@ -107,20 +120,20 @@
 }
 @media (max-width: 768px) {
   .hero {
-    background-color: #0074d9f6 !important; /* Blue background for mobile */
+    background-color: var(--primary-color) !important;
   }
   .floating-call-btn {
-    animation: blinkCallBtn 1.2s infinite !important;
+    animation: soft-call-pulse 2.4s ease-in-out infinite !important;
   }
-  @keyframes blinkCallBtn {
+  @keyframes soft-call-pulse {
     0%,
     100% {
       opacity: 1;
       box-shadow: 0 0 0 0 #25d36688;
     }
     50% {
-      opacity: 0.6;
-      box-shadow: 0 0 0 16px #25d36633;
+      opacity: 0.92;
+      box-shadow: 0 0 0 10px #25d36622;
     }
   }
   .floating-call-btn {
@@ -151,6 +164,16 @@
     margin-top: 8px !important;
   }
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-title,
+  .hero-text,
+  .cta-badge,
+  .floating-call-btn,
+  .down-arrow-icon {
+    animation: none !important;
+  }
+}
 /* Side down arrow for mobile */
 .side-down-arrow {
   display: none;
@@ -170,7 +193,7 @@
     transform: translateX(-50%);
     bottom: 24px;
     z-index: 1000;
-    background: rgba(30, 64, 175, 0.7);
+    background: rgba(13, 92, 99, 0.82);
     border-radius: 50%;
     width: 48px;
     height: 48px;

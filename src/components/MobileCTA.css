@@ -22,7 +22,7 @@
   font-weight: 700;
   text-align: center;
   text-decoration: none;
-  transition: filter 0.15s ease;
+  transition: filter 0.2s ease, transform 0.2s ease;
 }
 
 .mobile-cta-action:active {
@@ -30,8 +30,8 @@
 }
 
 .mobile-cta-call {
-  background: #3709ef;
-  animation: mobile-cta-blink 1.4s ease-in-out infinite;
+  background: var(--primary-color);
+  animation: mobile-cta-pulse 2.4s ease-in-out infinite;
 }
 
 .mobile-cta-whatsapp {
@@ -56,13 +56,20 @@
   font-weight: 500;
 }
 
-@keyframes mobile-cta-blink {
+@keyframes mobile-cta-pulse {
   0%,
   100% {
     filter: brightness(1);
   }
   50% {
-    filter: brightness(1.22);
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .mobile-cta-call {
+    animation: none;
   }
 }
 

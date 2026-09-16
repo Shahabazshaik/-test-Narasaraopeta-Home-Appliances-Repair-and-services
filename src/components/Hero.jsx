@@ -151,8 +151,12 @@ export default function Hero() {
         }}
       >
         <div className="hero-content hero-overlay">
-          <h2 className="hero-title">{slides[currentSlide].title}</h2>
-          <p className="hero-text">{slides[currentSlide].text}</p>
+          <h2 className="hero-title" key={`title-${currentSlide}`}>
+            {slides[currentSlide].title}
+          </h2>
+          <p className="hero-text" key={`text-${currentSlide}`}>
+            {slides[currentSlide].text}
+          </p>
           {/* ...existing code... */}
           {/* ...existing code... */}
           {/* ...existing code... */}
@@ -160,7 +164,7 @@ export default function Hero() {
           {/* Move quick response badge even further down for more separation */}
           <div className="hero-badge-wrapper">
             <div className="hero-cta-column">
-              <span className="cta-badge">
+              <span className="cta-badge" key={`badge-${currentSlide}`}>
                 Quick Response is Our Speciality and Reasonable Price
               </span>
             </div>
@@ -254,7 +258,7 @@ export default function Hero() {
             left: 16,
             bottom: 32,
             zIndex: 9999,
-            background: "#0074D9",
+            background: "var(--primary-color)",
             borderRadius: "50%",
             width: 48,
             height: 48,
@@ -299,8 +303,8 @@ export default function Hero() {
           }
         }
         @keyframes blink-up-arrow {
-          0%, 100% { box-shadow: 0 0 0 0 #0074D988; }
-          50% { box-shadow: 0 0 0 16px #0074D933; }
+          0%, 100% { box-shadow: 0 0 0 0 rgba(13, 92, 99, 0.55); }
+          50% { box-shadow: 0 0 0 16px rgba(13, 92, 99, 0.2); }
         }
       `}</style>
     </>

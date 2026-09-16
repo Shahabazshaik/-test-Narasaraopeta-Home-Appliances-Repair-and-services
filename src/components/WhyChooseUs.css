@@ -11,7 +11,7 @@
 
 .modern-title {
   text-align: center;
-  color: #1a237e;
+  color: var(--primary-color);
   font-size: 2.5rem;
   font-weight: 800;
   margin-bottom: 36px;
@@ -65,7 +65,7 @@
 }
 
 .feature-title {
-  color: #283593;
+  color: var(--primary-color);
   font-size: 1.25rem;
   font-weight: 700;
   margin-bottom: 10px;
@@ -134,14 +134,14 @@
 }
 .why-choose-us-container h1 {
   text-align: center;
-  color: #1a237e;
+  color: var(--primary-color);
   margin-bottom: 16px;
 }
 .why-choose-us-container section {
   margin-bottom: 12px;
 }
 .why-choose-us-container h2 {
-  color: #3949ab;
+  color: var(--primary-color);
   margin-bottom: 4px;
 }
 .why-choose-us-container p {

@@ -19,6 +19,26 @@
   transform: translateY(0);
 }
 
+.service-card:nth-child(2) {
+  transition-delay: 70ms;
+}
+
+.service-card:nth-child(3) {
+  transition-delay: 140ms;
+}
+
+.service-card:nth-child(4) {
+  transition-delay: 210ms;
+}
+
+.service-card:nth-child(5) {
+  transition-delay: 280ms;
+}
+
+.service-card:nth-child(6) {
+  transition-delay: 350ms;
+}
+
 .service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 22px 38px rgba(17, 24, 39, 0.12);
@@ -100,6 +120,13 @@
 .service-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 16px 24px rgba(13, 92, 99, 0.18);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .service-card,
+  .service-button {
+    transition: none;
+  }
 }
 
 @media (max-width: 768px) {
