@@ -1,16 +1,19 @@
 .service-card {
-  background: rgb(255, 255, 255);
-  padding: 32px 28px;
-  border-radius: var(--border-radius);
-  box-shadow: var(--shadow);
+  background: rgba(255, 255, 255, 0.92);
+  padding: 26px 24px;
+  border-radius: 22px;
+  box-shadow: 0 18px 34px rgba(17, 24, 39, 0.07);
   text-align: center;
   transition:
     transform 0.6s cubic-bezier(0.23, 1, 0.32, 1),
-    opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  border: 1px solid var(--line-color);
+    opacity 0.6s cubic-bezier(0.23, 1, 0.32, 1),
+    box-shadow 0.3s ease;
+  border: 1px solid rgba(13, 92, 99, 0.08);
   opacity: 0;
   transform: translateY(40px);
+  overflow: hidden;
 }
+
 .service-card.visible {
   opacity: 1;
   transform: translateY(0);
@@ -18,13 +21,13 @@
 
 .service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 22px 38px rgba(17, 24, 39, 0.12);
   border-top-color: var(--secondary-color);
 }
 
 .service-icon {
   font-size: 3.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
   display: inline-block;
   position: relative;
   width: 80px;
@@ -36,6 +39,7 @@
   height: 100%;
   object-fit: contain;
   display: block;
+  border-radius: 16px;
 }
 
 .fallback-icon {
@@ -46,21 +50,22 @@
 .service-card h3 {
   font-size: 1.5rem;
   color: var(--dark-color);
-  margin-bottom: 15px;
+  margin-bottom: 14px;
 }
 
 .service-card > p {
   color: var(--text-color);
-  margin-bottom: 25px;
-  line-height: 1.6;
+  margin-bottom: 20px;
+  line-height: 1.7;
 }
 
 .features {
   text-align: left;
-  background-color: var(--light-color);
-  padding: 20px;
-  border-radius: var(--border-radius);
-  margin-bottom: 25px;
+  background: linear-gradient(180deg, #eff7f5 0%, #f7fbfa 100%);
+  padding: 18px 18px 14px;
+  border-radius: 16px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(13, 92, 99, 0.06);
 }
 
 .features h4 {
@@ -81,51 +86,31 @@
 }
 
 .service-button {
-  background-color: var(--primary-color);
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
   color: rgb(255, 255, 255);
-  padding: 10px 25px;
-  border-radius: var(--border-radius);
-  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 700;
   transition: all 0.3s ease;
   width: 100%;
   animation: none;
-}
-@keyframes blink-service-btn {
-  0%,
-  100% {
-    box-shadow: 0 0 0 0 var(--primary-color);
-    opacity: 1;
-  }
-  50% {
-    box-shadow: 0 0 16px 4px var(--secondary-color);
-    opacity: 0.7;
-  }
+  box-shadow: 0 12px 18px rgba(13, 92, 99, 0.14);
 }
 
 .service-button:hover {
-  background-color: var(--secondary-color);
   transform: translateY(-2px);
-}
-
-@keyframes bounce {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
+  box-shadow: 0 16px 24px rgba(13, 92, 99, 0.18);
 }
 
 @media (max-width: 768px) {
   .service-card {
     min-height: 220px;
-    padding: 12px 2vw;
-    border-radius: 8px;
+    padding: 18px 16px;
+    border-radius: 16px;
   }
 
   .service-icon {
-    font-size: 2.5rem;
+    font-size: 2.6rem;
   }
 
   .service-card h3 {

@@ -49,7 +49,7 @@ export default function Testimonials() {
   };
 
   return (
-    <section className="testimonials" id="testimonials">
+    <section className="testimonials" id="reviews">
       <div className="container">
         <h2>Customer Ratings & Reviews</h2>
         <p className="section-subtitle">

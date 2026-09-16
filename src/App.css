@@ -2,6 +2,7 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  background: linear-gradient(180deg, #f8fbfa 0%, #f3f7f6 100%);
 }
 
 main {
@@ -9,7 +10,8 @@ main {
 }
 
 section {
-  padding: 104px 0;
+  padding: 100px 0;
+  position: relative;
 }
 
 h2 {
@@ -20,11 +22,12 @@ h2 {
 }
 
 .section-subtitle {
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   color: var(--text-color);
   text-align: center;
-  margin: 0 auto 54px;
+  margin: 0 auto 52px;
   max-width: 56ch;
+  line-height: 1.7;
 }
 
 @media (max-width: 768px) {
@@ -37,6 +40,6 @@ h2 {
   }
 
   .section-subtitle {
-    margin-bottom: 40px;
+    margin-bottom: 36px;
   }
 }
